@@ -6,10 +6,10 @@ import Card from "../components/Card.astro";
 <Layout title="Tasle">
   <main class="font-medium text-white">
     <header
-      class="fixed left-0 right-0 top-0 z-30 flex items-center justify-between px-12 py-5"
+      class="fixed left-0 right-0 top-0 z-30 flex items-center justify-between py-3"
     >
       <div class="flex grow basis-0">
-        <svg class="w-32" viewBox="517.376 220.45 335.648 34.9">
+        <svg class="w-32 ml-12" viewBox="517.376 220.45 335.648 34.9">
           <path
             d="M 517.376 220.55 C 518.254 223.988 520.938 226.673 524.376 227.55 L 535.376 227.55 L 535.876 227.65 L 535.876 255.25 L 542.676 255.25 L 542.676 227.75 L 543.376 227.45 L 554.376 227.45 C 557.803 226.553 560.48 223.877 561.376 220.45 L 517.376 220.45 L 517.376 220.55 Z M 755.976 220.55 L 749.176 220.55 L 749.176 255.35 L 780.376 255.35 C 783.378 254.215 785.624 251.67 786.376 248.55 L 756.076 248.55 L 756.076 220.45 L 755.976 220.55 Z M 703.676 227.35 C 707.276 226.35 710.276 223.55 711.076 220.45 L 672.976 220.55 L 672.976 241.15 L 704.076 241.15 L 704.076 248.35 L 679.676 248.35 C 675.908 249.33 672.74 251.879 670.976 255.35 L 710.876 255.35 L 710.876 234.35 L 679.676 234.35 L 679.676 227.35 L 703.676 227.35 Z M 596.027 255.35 L 602.727 255.35 L 602.727 241.35 L 627.327 241.35 L 627.327 255.35 L 634.027 255.35 L 634.027 234.35 L 596.027 234.35 L 596.027 255.35 Z M 819.924 227.45 L 845.924 227.45 C 849.412 226.625 852.15 223.926 853.024 220.45 L 812.924 220.45 C 813.782 223.899 816.475 226.592 819.924 227.45 Z M 819.924 241.25 L 845.924 241.25 C 849.412 240.425 852.15 237.726 853.024 234.25 L 812.924 234.25 C 813.782 237.699 816.475 240.392 819.924 241.25 Z M 819.924 255.35 L 845.924 255.35 C 849.412 254.525 852.15 251.826 853.024 248.35 L 812.924 248.35 C 813.782 251.799 816.475 254.492 819.924 255.35 Z M 602.027 227.45 L 628.027 227.45 C 631.477 226.592 634.17 223.899 635.027 220.45 L 595.027 220.45 C 595.885 223.899 598.578 226.592 602.027 227.45 Z"
             fill="currentColor"
@@ -18,49 +18,66 @@ import Card from "../components/Card.astro";
         </svg>
       </div>
       <nav>
-        <ul
-          class="flex text-sm [&>li>a]:rounded [&>li>a]:px-4 [&>li>a]:py-1 [&>li>a]:transition [&>li>a]:hover:bg-zinc-600"
-        >
-          <li><a href="#">Model S</a></li>
-          <li><a href="#">Model 3</a></li>
-          <li><a href="#">Model X</a></li>
-          <li><a href="#">Model Y</a></li>
-          <!-- <li><a href="#">Solar Roof</a></li> -->
-          <!-- <li><a href="#">Solar Panels</a></li> -->
-          <li><a href="#">Powerwall</a></li>
-          <li><a href="#">Charging</a></li>
+        <ul class="flex text-sm">
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Model S</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Model 3</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Model X</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Model Y</a>
+          </li>
+          <!-- <li class=" rounded px-4 py-1 transition hover:bg-zinc-600"><a href="#">Solar Roof</a></li> -->
+          <!-- <li class=" rounded px-4 py-1 transition hover:bg-zinc-600"><a href="#">Solar Panels</a></li> -->
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Powerwall</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Charging</a>
+          </li>
         </ul>
       </nav>
-      <nav class="flex grow basis-0 justify-end">
-        <ul
-          class="flex text-sm [&>li>a]:rounded [&>li>a]:px-4 [&>li>a]:py-1 [&>li>a]:transition [&>li>a]:hover:bg-zinc-600"
-        >
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Account</a></li>
-          <li><a href="#">Menu</a></li>
+      <nav class="flex grow basis-0 justify-end mr-8 ">
+        <ul class="flex">
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Support</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Shop</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Account</a>
+          </li>
+          <li class="rounded px-4 py-1 transition hover:bg-zinc-600">
+            <a href="#">Menu</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <section class="relative">
+    <section class="relative h-screen w-screen">
       <div
-        class="relative z-20 flex h-screen w-screen flex-col items-center justify-around"
+        class="relative z-20 flex h-screen w-screen flex-col items-center justify-between gap-40"
       >
-        <header class="flex flex-col items-center justify-center gap-2">
-          <h2 class="text-5xl">Experience Tasle</h2>
-          <p class="font-normal">Schedule a Demo Drive Today</p>
+        <header class="flex flex-col items-center justify-center gap-2 pt-36">
+          <h2 class="text-4xl">Experience Tasle</h2>
+          <p class="text-sm font-normal">Schedule a Demo Drive Today</p>
         </header>
-        <footer>
+        <footer class="relative flex grow flex-col justify-end pb-20">
           <a
-            class="block w-72 rounded-md border-4 border-white py-1 text-center text-sm"
+            class="block w-64 rounded-md border-4 bg-white/5 border-white py-1.5 text-center text-sm transition hover:bg-white hover:text-black"
           >
             Demo Drive
           </a>
         </footer>
       </div>
-      <div class="absolute bottom-0 top-0 z-0">
+      <div class="absolute bottom-0 top-0 z-0 h-full w-full">
         <video
           src="/public/Homepage-Test_Drive-NA-Desktop.webm"
+          class="h-full w-full object-cover"
           autoplay
           muted
           loop></video>
