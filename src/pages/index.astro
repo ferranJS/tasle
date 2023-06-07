@@ -6,17 +6,21 @@ import Card from "../components/Card.astro";
 <Layout title="Tasle">
   <main class="font-medium text-white">
     <header
-      class="absolute left-0 right-0 top-0 flex items-center justify-between bg-zinc-700 px-12 py-5"
+      class="fixed left-0 right-0 top-0 z-30 flex items-center justify-between px-12 py-5"
     >
-      <svg class="w-32" viewBox="517.376 220.45 335.648 34.9">
-        <path
-          d="M 517.376 220.55 C 518.254 223.988 520.938 226.673 524.376 227.55 L 535.376 227.55 L 535.876 227.65 L 535.876 255.25 L 542.676 255.25 L 542.676 227.75 L 543.376 227.45 L 554.376 227.45 C 557.803 226.553 560.48 223.877 561.376 220.45 L 517.376 220.45 L 517.376 220.55 Z M 755.976 220.55 L 749.176 220.55 L 749.176 255.35 L 780.376 255.35 C 783.378 254.215 785.624 251.67 786.376 248.55 L 756.076 248.55 L 756.076 220.45 L 755.976 220.55 Z M 703.676 227.35 C 707.276 226.35 710.276 223.55 711.076 220.45 L 672.976 220.55 L 672.976 241.15 L 704.076 241.15 L 704.076 248.35 L 679.676 248.35 C 675.908 249.33 672.74 251.879 670.976 255.35 L 710.876 255.35 L 710.876 234.35 L 679.676 234.35 L 679.676 227.35 L 703.676 227.35 Z M 596.027 255.35 L 602.727 255.35 L 602.727 241.35 L 627.327 241.35 L 627.327 255.35 L 634.027 255.35 L 634.027 234.35 L 596.027 234.35 L 596.027 255.35 Z M 819.924 227.45 L 845.924 227.45 C 849.412 226.625 852.15 223.926 853.024 220.45 L 812.924 220.45 C 813.782 223.899 816.475 226.592 819.924 227.45 Z M 819.924 241.25 L 845.924 241.25 C 849.412 240.425 852.15 237.726 853.024 234.25 L 812.924 234.25 C 813.782 237.699 816.475 240.392 819.924 241.25 Z M 819.924 255.35 L 845.924 255.35 C 849.412 254.525 852.15 251.826 853.024 248.35 L 812.924 248.35 C 813.782 251.799 816.475 254.492 819.924 255.35 Z M 602.027 227.45 L 628.027 227.45 C 631.477 226.592 634.17 223.899 635.027 220.45 L 595.027 220.45 C 595.885 223.899 598.578 226.592 602.027 227.45 Z"
-          fill="currentColor"
-          data-darkreader-inline-fill=""
-          style="--darkreader-inline-fill: currentColor;"></path>
-      </svg>
+      <div class="flex grow basis-0">
+        <svg class="w-32" viewBox="517.376 220.45 335.648 34.9">
+          <path
+            d="M 517.376 220.55 C 518.254 223.988 520.938 226.673 524.376 227.55 L 535.376 227.55 L 535.876 227.65 L 535.876 255.25 L 542.676 255.25 L 542.676 227.75 L 543.376 227.45 L 554.376 227.45 C 557.803 226.553 560.48 223.877 561.376 220.45 L 517.376 220.45 L 517.376 220.55 Z M 755.976 220.55 L 749.176 220.55 L 749.176 255.35 L 780.376 255.35 C 783.378 254.215 785.624 251.67 786.376 248.55 L 756.076 248.55 L 756.076 220.45 L 755.976 220.55 Z M 703.676 227.35 C 707.276 226.35 710.276 223.55 711.076 220.45 L 672.976 220.55 L 672.976 241.15 L 704.076 241.15 L 704.076 248.35 L 679.676 248.35 C 675.908 249.33 672.74 251.879 670.976 255.35 L 710.876 255.35 L 710.876 234.35 L 679.676 234.35 L 679.676 227.35 L 703.676 227.35 Z M 596.027 255.35 L 602.727 255.35 L 602.727 241.35 L 627.327 241.35 L 627.327 255.35 L 634.027 255.35 L 634.027 234.35 L 596.027 234.35 L 596.027 255.35 Z M 819.924 227.45 L 845.924 227.45 C 849.412 226.625 852.15 223.926 853.024 220.45 L 812.924 220.45 C 813.782 223.899 816.475 226.592 819.924 227.45 Z M 819.924 241.25 L 845.924 241.25 C 849.412 240.425 852.15 237.726 853.024 234.25 L 812.924 234.25 C 813.782 237.699 816.475 240.392 819.924 241.25 Z M 819.924 255.35 L 845.924 255.35 C 849.412 254.525 852.15 251.826 853.024 248.35 L 812.924 248.35 C 813.782 251.799 816.475 254.492 819.924 255.35 Z M 602.027 227.45 L 628.027 227.45 C 631.477 226.592 634.17 223.899 635.027 220.45 L 595.027 220.45 C 595.885 223.899 598.578 226.592 602.027 227.45 Z"
+            fill="currentColor"
+            data-darkreader-inline-fill=""
+            style="--darkreader-inline-fill: currentColor;"></path>
+        </svg>
+      </div>
       <nav>
-        <ul class="flex gap-7 text-sm">
+        <ul
+          class="flex text-sm [&>li>a]:rounded [&>li>a]:px-4 [&>li>a]:py-1 [&>li>a]:transition [&>li>a]:hover:bg-zinc-600"
+        >
           <li><a href="#">Model S</a></li>
           <li><a href="#">Model 3</a></li>
           <li><a href="#">Model X</a></li>
@@ -27,8 +31,10 @@ import Card from "../components/Card.astro";
           <li><a href="#">Charging</a></li>
         </ul>
       </nav>
-      <nav>
-        <ul class="flex gap-7 text-sm">
+      <nav class="flex grow basis-0 justify-end">
+        <ul
+          class="flex text-sm [&>li>a]:rounded [&>li>a]:px-4 [&>li>a]:py-1 [&>li>a]:transition [&>li>a]:hover:bg-zinc-600"
+        >
           <li><a href="#">Support</a></li>
           <li><a href="#">Shop</a></li>
           <li><a href="#">Account</a></li>
@@ -36,16 +42,29 @@ import Card from "../components/Card.astro";
         </ul>
       </nav>
     </header>
-    <section
-      class="flex h-screen w-full flex-col items-center justify-around bg-zinc-400"
-    >
-      <div class="flex flex-col items-center justify-center gap-2">
-        <h1 class="text-5xl font-semibold">Experience Tasle</h1>
-        <p>Schedule a Demo Drive Today</p>
+    <section class="relative">
+      <div
+        class="relative z-20 flex h-screen w-screen flex-col items-center justify-around"
+      >
+        <header class="flex flex-col items-center justify-center gap-2">
+          <h2 class="text-5xl">Experience Tasle</h2>
+          <p class="font-normal">Schedule a Demo Drive Today</p>
+        </header>
+        <footer>
+          <a
+            class="block w-72 rounded-md border-4 border-white py-1 text-center text-sm"
+          >
+            Demo Drive
+          </a>
+        </footer>
       </div>
-      <button class="w-72 rounded-sm border-4 border-white py-1">
-        Demo Drive
-      </button>
+      <div class="absolute bottom-0 top-0 z-0">
+        <video
+          src="/public/Homepage-Test_Drive-NA-Desktop.webm"
+          autoplay
+          muted
+          loop></video>
+      </div>
     </section>
   </main>
 </Layout>
