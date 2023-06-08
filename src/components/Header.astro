@@ -1,0 +1,96 @@
+---
+import Logo from "../components/Logo.astro";
+
+---
+
+<header
+  class="fixed left-0 right-0 top-0 z-30 flex items-center justify-between py-5 text-sm transition duration-200"
+>
+  <div class="flex grow basis-0">
+    <Logo Class="w-32 ml-12" />
+  </div>
+  <nav>
+    <ul class="flex">
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Model S</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Model 3</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Model X</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Model Y</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Powerwall</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Charging</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <nav class="mr-8 flex grow basis-0 justify-end">
+    <ul class="flex">
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Support</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Shop</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Account</a
+        >
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+          >Menu</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  // in order to control it depending on the section, we can use querySelectorAll
+  const section = document.querySelector('.snap-center');
+
+  function handleScroll() {
+    if (!section) return false;
+    const rect = section.getBoundingClientRect();
+    let header = document.querySelector('header')!;
+    console.log("rect.bottom: ", rect.bottom);
+    if (      
+      rect.bottom >= 10
+    ) {
+      header.classList.remove('text-zinc-900');
+      header.classList.add('text-white');
+    } else {
+      header.classList.remove('text-white');
+      header.classList.add('text-zinc-900');
+    }
+  }
+
+  document.querySelector("main")?.addEventListener('scroll', () => {
+    clearTimeout((window as any).scrollTimer);
+    (window as any).scrollTimer = setTimeout(handleScroll, 50);
+  });
+</script>
