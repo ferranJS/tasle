@@ -7,6 +7,7 @@ import Section3 from "../components/Section3.astro";
 import Section4 from "../components/Section4.astro";
 import Section5 from "../components/Section5.astro";
 import Section6 from "../components/Section6.astro";
+import Menu from "../components/Menu.astro";
 ---
 
 <Layout title="Tasle">
@@ -19,7 +20,25 @@ import Section6 from "../components/Section6.astro";
     <Section5 />
     <Section6 />
   </main>
+  <Menu />
 </Layout>
+
+<script type="text/javascript">
+  const aside = document.querySelector("aside")
+  const backdrop = document.querySelector("#backdrop")
+  
+  function closeSideMenu() {
+    aside?.classList.remove("-translate-x-80")
+    aside?.classList.add("opacity-0")
+    backdrop?.classList.add("hidden")
+  }
+
+  function openSideMenu() {
+    aside?.classList.add("-translate-x-80")
+    aside?.classList.remove("opacity-0")
+    backdrop?.classList.remove("hidden")
+  }
+</script>
 
 <style>
   .first-load-h2 {

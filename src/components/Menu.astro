@@ -1,0 +1,45 @@
+---
+import Xbutton from "./Xbutton.astro";
+---
+
+<div id="backdrop" class="absolute hidden opacity-0 backdrop-blur-sm z-40 top-0 right-0 bottom-0 left-0 w-screen h-screen"></div>
+<aside
+  class="absolute -right-80 bottom-0 top-0 z-50 h-screen w-80 overflow-hidden bg-white text-sm font-medium text-zinc-700 transition duration-300"
+>
+  <div class="w-80 px-8 py-5 text-end">
+    <Xbutton Class="w-6" />
+  </div>
+  <div
+    class="flex h-[calc(100vh-80px)] w-full flex-col items-start justify-start gap-2 overflow-auto pb-10 pl-14 pr-8 [&>a]:rounded-md [&>a]:px-3 [&>a]:py-1.5 [&>a]:transition [&>a]:duration-300"
+  >
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Model 3</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Model X</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Model Y</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Solar Panels</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Powerwall</a>
+    <a class="hover:bg-zinc-700/10" href="#">Existing Inventory</a>
+    <a class="hover:bg-zinc-700/10" href="#">Used Inventory</a>
+    <a class="hover:bg-zinc-700/10" href="#">Trade-In</a>
+    <a class="hover:bg-zinc-700/10" href="#">Demo Drive</a>
+    <a class="hover:bg-zinc-700/10" href="#">Insurance</a>
+    <a class="hover:bg-zinc-700/10" href="#">Fleet</a>
+    <a class="hover:bg-zinc-700/10" href="#">Commercial Energy</a>
+    <a class="hover:bg-zinc-700/10" href="#">Utilities</a>
+    <a class="hover:bg-zinc-700/10" href="#">Charging</a>
+    <a class="hover:bg-zinc-700/10" href="#">Careers</a>
+    <a class="hover:bg-zinc-700/10" href="#">Find Us</a>
+    <a class="hover:bg-zinc-700/10" href="#">Events</a>
+    <a class="hover:bg-zinc-700/10" href="#">Support</a>
+    <a class="hover:bg-zinc-700/10" href="#">Investor Relations</a>
+    <a class="hover:bg-zinc-700/10" href="#">Shop</a>
+    <a class="hover:bg-zinc-700/10" href="#">Account</a>
+    <a class="hover:bg-zinc-700/10" href="#">More</a>
+    <div class="flex gap-2" role="button" tabindex="0">
+      <img class="h-6 w-5" src="globe.svg" alt="globe icon" />
+      <div>
+        <div>United States</div>
+        <a class="text-xs text-zinc-500"> English</a>
+      </div>
+    </div>
+  </div>
+</aside>

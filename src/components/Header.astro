@@ -52,13 +52,22 @@ import Logo from "../components/Logo.astro";
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Menu</a>
+        <a
+          href="#"
+          class="rounded-md px-3 py-2 hover:bg-zinc-700/10"
+          onclick="openSideMenu()"
+        >
+          Menu
+        </a>
       </li>
     </ul>
   </nav>
-  <button class="mr-8 rounded-md bg-zinc-700/10 px-3 py-2 xl:hidden"
-    >Menu</button
+  <button
+    class="mr-8 rounded-md bg-zinc-700/10 px-3 py-2 xl:hidden"
+    onclick="openSideMenu()"
   >
+    Menu
+  </button>
 </header>
 
 <script>
@@ -68,8 +77,7 @@ import Logo from "../components/Logo.astro";
   function handleScroll() {
     if (!section) return false;
     const rect = section.getBoundingClientRect();
-    let header = document.querySelector("header")!;
-    console.log("rect.bottom: ", rect.bottom);
+    let header = document.querySelector("header");
     if (rect.bottom >= 10) {
       header.classList.remove("text-zinc-900");
       header.classList.add("text-white");
@@ -80,7 +88,7 @@ import Logo from "../components/Logo.astro";
   }
 
   document.querySelector("main")?.addEventListener("scroll", () => {
-    clearTimeout((window as any).scrollTimer);
-    (window as any).scrollTimer = setTimeout(handleScroll, 50);
+    clearTimeout(window.scrollTimer);
+    window.scrollTimer = setTimeout(handleScroll, 50);
   });
 </script>
