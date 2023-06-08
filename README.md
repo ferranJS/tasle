@@ -4,8 +4,7 @@
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-landing-page)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-landing-page?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-![landing page screenshot](https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png)
-<img src="https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png" height="70%">
+<img src="https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png" height="456px" alt="landing page screenshot">
 
 ## Setup roadmap
 
