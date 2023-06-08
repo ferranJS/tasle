@@ -1,6 +1,5 @@
 ---
 import Logo from "../components/Logo.astro";
-
 ---
 
 <header
@@ -9,87 +8,78 @@ import Logo from "../components/Logo.astro";
   <div class="flex grow basis-0">
     <Logo Class="w-32 ml-12" />
   </div>
-  <nav>
+  <nav class="hidden xl:inline">
     <ul class="flex">
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Model S</a
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model S</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Model 3</a
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model 3</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Model X</a
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model X</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Model Y</a
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model Y</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10"
           >Powerwall</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10"
           >Charging</a
         >
       </li>
     </ul>
   </nav>
-  <nav class="mr-8 flex grow basis-0 justify-end">
+  <nav class="mr-8 hidden grow basis-0 justify-end xl:flex">
     <ul class="flex">
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Support</a
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Support</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Shop</a
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Shop</a>
+      </li>
+      <li>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Account</a
         >
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Account</a
-        >
-      </li>
-      <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/5"
-          >Menu</a
-        >
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Menu</a>
       </li>
     </ul>
   </nav>
+  <button class="mr-8 rounded-md bg-zinc-700/10 px-3 py-2 xl:hidden"
+    >Menu</button
+  >
 </header>
 
 <script>
   // in order to control it depending on the section, we can use querySelectorAll
-  const section = document.querySelector('.snap-center');
+  const section = document.querySelector(".snap-center");
 
   function handleScroll() {
     if (!section) return false;
     const rect = section.getBoundingClientRect();
-    let header = document.querySelector('header')!;
+    let header = document.querySelector("header")!;
     console.log("rect.bottom: ", rect.bottom);
-    if (      
-      rect.bottom >= 10
-    ) {
-      header.classList.remove('text-zinc-900');
-      header.classList.add('text-white');
+    if (rect.bottom >= 10) {
+      header.classList.remove("text-zinc-900");
+      header.classList.add("text-white");
     } else {
-      header.classList.remove('text-white');
-      header.classList.add('text-zinc-900');
+      header.classList.remove("text-white");
+      header.classList.add("text-zinc-900");
     }
   }
 
-  document.querySelector("main")?.addEventListener('scroll', () => {
+  document.querySelector("main")?.addEventListener("scroll", () => {
     clearTimeout((window as any).scrollTimer);
     (window as any).scrollTimer = setTimeout(handleScroll, 50);
   });

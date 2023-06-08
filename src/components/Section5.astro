@@ -5,20 +5,24 @@
     <header class="flex flex-col items-center justify-center gap-2 pt-36">
       <h2 class="first-load-h2 text-4xl">Solar Panels</h2>
       <div class="text-center">
-        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
+        <p
+          class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4"
+        >
           Schedule a Virtual Consultation
         </p>
       </div>
     </header>
-    <footer class="relative flex grow flex-row items-end justify-end pb-20 gap-5">
+    <footer
+      class="relative flex grow flex-row w-screen  flex-wrap content-end items-center justify-center gap-5  sm:pb-20 pb-10"
+    >
       <a
-        class="block w-64 rounded-md bg-zinc-800 py-2.5 text-center text-sm text-white transition"
+        class="block w-5/6 rounded-md sm:w-64 bg-zinc-800 py-2.5 text-center text-sm text-white transition"
         href="#"
       >
         Order Now
       </a>
       <a
-        class="block w-64 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition"
+        class="block w-5/6 rounded-md sm:w-64 bg-white py-2.5 text-center text-sm text-zinc-800 transition"
         href="#"
       >
         Learn More
@@ -26,9 +30,16 @@
     </footer>
   </div>
   <div class="absolute bottom-0 top-0 z-0 h-full w-full">
-    <img
-      src="/public/425_HP_SolarPanels_D.avif"
-      class="h-full w-full object-cover"
-    />
+    <picture>
+      <source
+        srcset="/public/425_HP_SolarPanels_D.avif"
+        media="(min-width: 600px)"
+      />
+      <img
+        src="/public/Homepage-SolarPanels-Mobile.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+        alt="tasle solar panels"
+      />
+    </picture>
   </div>
 </section>

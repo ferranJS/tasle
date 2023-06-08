@@ -5,7 +5,9 @@
     <header class="flex flex-col items-center justify-center gap-2 pt-36">
       <h2 class="first-load-h2 text-4xl">Model 3</h2>
       <div class="text-center">
-        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
+        <p
+          class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4"
+        >
           Starting at $32,740
         </p>
         <p class="first-load-p one-s-delay text-sm font-normal">
@@ -13,15 +15,17 @@
         </p>
       </div>
     </header>
-    <footer class="relative flex grow flex-row items-end justify-end pb-20 gap-5">
+    <footer
+      class="relative flex grow flex-row w-screen  flex-wrap content-end items-center justify-center gap-5  sm:pb-20 pb-10"
+    >
       <a
-        class="block w-64 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition"
+        class="block w-5/6 rounded-md sm:w-64 bg-zinc-700 py-2.5 text-center text-sm text-white transition"
         href="#"
       >
         Order Now
       </a>
       <a
-        class="block w-64 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition"
+        class="block w-5/6 rounded-md sm:w-64 bg-white py-2.5 text-center text-sm text-zinc-800 transition"
         href="#"
       >
         Demo Drive
@@ -29,9 +33,15 @@
     </footer>
   </div>
   <div class="absolute bottom-0 top-0 z-0 h-full w-full">
-    <img
-      src="/public/Homepage-Model-3-Desktop-LHD.avif"
-      class="h-full w-full object-cover"
-    />
+    <picture>
+      <source
+        srcset="/public/Homepage-Model-3-Desktop-LHD.avif"
+        media="(min-width: 700px)"
+      />
+      <img
+        src="/public/Homepage-Model-3-LHD-Mobile.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+      />
+    </picture>
   </div>
 </section>
