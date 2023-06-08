@@ -1,8 +1,13 @@
 # Tesla Landing Clone with Tailwind and Astro
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-landing-page)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-landing-page)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-landing-page?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
+![landing page screenshot](https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png)
+<img src="https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png" height="70%">
 
-### Setup roadmap
+## Setup roadmap
 
 >npm create astro@latest -- --template basics
 
@@ -24,12 +29,6 @@
       ]
     }
 
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-![landing page screenshot](https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png)
 
 ## 🧞 Commands
 
