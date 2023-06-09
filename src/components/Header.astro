@@ -1,94 +1,92 @@
 ---
-import Logo from "../components/Logo.astro";
+import Logo from "../components/Logo.astro"
 ---
 
 <header
   class="fixed left-0 right-0 top-0 z-30 flex items-center justify-between py-5 text-sm transition duration-200"
 >
   <div class="flex grow basis-0">
-    <Logo Class="w-32 ml-12" />
+    <a href="#Section1">
+      <Logo Class="w-32 ml-12" />
+    </a>
+  </div>
+  <div
+    class="pointer-events-none absolute translate-x-[var(--left)] z-20 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-500/10 opacity-0 transition-all duration-500 ease-in-out"
+    id="button-hover"
+  >
   </div>
   <nav class="hidden xl:inline">
     <ul class="flex">
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model S</a
-        >
+        <a href="#Model3" class="rounded-md px-3 py-2 z-30">Model 3</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model 3</a
-        >
+        <a href="#ModelY" class="rounded-md px-3 py-2 z-30">Model X</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model X</a
-        >
+        <a href="#ModelX" class="rounded-md px-3 py-2 z-30">Model Y</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Model Y</a
-        >
+        <a href="#SolarPanels" class="rounded-md px-3 py-2 z-30">Solar Panels</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10"
-          >Powerwall</a
-        >
-      </li>
-      <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10"
-          >Charging</a
-        >
+        <a href="#Accessories" class="rounded-md px-3 py-2 z-30">Accessories</a>
       </li>
     </ul>
   </nav>
   <nav class="mr-8 hidden grow basis-0 justify-end xl:flex">
     <ul class="flex">
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Support</a
-        >
+        <a href="#" class="rounded-md px-3 py-2 z-30">Support</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Shop</a>
+        <a href="#" class="rounded-md px-3 py-2 z-30">Shop</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 hover:bg-zinc-700/10">Account</a
-        >
+        <a href="#" class="rounded-md px-3 py-2 z-30">Account</a>
       </li>
       <li>
-        <a
-          href="#"
-          class="rounded-md px-3 py-2 hover:bg-zinc-700/10"
-          onclick="openSideMenu()"
-        >
-          Menu
-        </a>
+        <a href="#" class="rounded-md px-3 py-2 z-30" onclick="openSideMenu()">Menu</a>
       </li>
     </ul>
   </nav>
-  <button
-    class="mr-8 rounded-md bg-zinc-700/10 px-3 py-2 xl:hidden"
-    onclick="openSideMenu()"
-  >
-    Menu
-  </button>
+  <button class="mr-8 rounded-md bg-zinc-700/10 px-3 py-2 xl:hidden" onclick=";openSideMenu()">Menu</button>
 </header>
 
 <script>
+  const buttonHover = document.querySelector("#button-hover") as HTMLDivElement
+  // movement between buttons
+  document.querySelectorAll("header a.rounded-md").forEach((element) => {
+    element.addEventListener("mouseenter", (e) => {
+      const rect = (e.target as HTMLElement).getBoundingClientRect()
+      buttonHover!.style.setProperty("--left", rect.left + "px")
+      buttonHover!.style.setProperty("--width", rect.width + "px")
+      buttonHover!.style.setProperty("--height", rect.height + "px")
+      buttonHover!.classList.remove("opacity-0")
+    })
+    element.addEventListener("mouseleave", (e) => {
+      buttonHover!.classList.add("opacity-0")
+    })
+  }) // no hover
+
   // in order to control it depending on the section, we can use querySelectorAll
-  const section = document.querySelector(".snap-center");
+  const section = document.querySelector(".snap-center")
 
   function handleScroll() {
-    if (!section) return false;
-    const rect = section.getBoundingClientRect();
-    let header = document.querySelector("header");
+    if (!section) return false
+    const rect = section.getBoundingClientRect()
+    const header = document.querySelector("header")
     if (rect.bottom >= 10) {
-      header.classList.remove("text-zinc-900");
-      header.classList.add("text-white");
+      header!.classList.remove("text-zinc-900")
+      header!.classList.add("text-white")
     } else {
-      header.classList.remove("text-white");
-      header.classList.add("text-zinc-900");
+      header!.classList.remove("text-white")
+      header!.classList.add("text-zinc-900")
     }
   }
 
   document.querySelector("main")?.addEventListener("scroll", () => {
-    clearTimeout(window.scrollTimer);
-    window.scrollTimer = setTimeout(handleScroll, 50);
-  });
+    clearTimeout((window as any).scrollTimer)
+    ;(window as any).scrollTimer = setTimeout(handleScroll, 50)
+  })
 </script>

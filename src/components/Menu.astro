@@ -2,7 +2,12 @@
 import Xbutton from "./Xbutton.astro";
 ---
 
-<div id="backdrop" class="absolute hidden opacity-0 backdrop-blur-sm z-40 top-0 right-0 bottom-0 left-0 w-screen h-screen"></div>
+<div
+  id="backdrop"
+  class="absolute bottom-0 left-0 right-0 top-0 z-40 hidden backdrop-blur-sm"
+  onclick="closeSideMenu()"
+>
+</div>
 <aside
   class="absolute -right-80 bottom-0 top-0 z-50 h-screen w-80 overflow-hidden bg-white text-sm font-medium text-zinc-700 transition duration-300"
 >
@@ -10,7 +15,7 @@ import Xbutton from "./Xbutton.astro";
     <Xbutton Class="w-6" />
   </div>
   <div
-    class="flex h-[calc(100vh-80px)] w-full flex-col items-start justify-start gap-2 overflow-auto pb-10 pl-14 pr-8 [&>a]:rounded-md [&>a]:px-3 [&>a]:py-1.5 [&>a]:transition [&>a]:duration-300"
+    class="flex h-[calc(100vh-80px)] w-full flex-col items-start justify-start gap-2 overflow-auto pb-10 pl-14 pr-8 [&>a]:w-full [&>a]:rounded-md [&>a]:px-3 [&>a]:py-1.5 [&>a]:transition [&>a]:duration-300"
   >
     <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Model 3</a>
     <a class="hover:bg-zinc-700/10 xl:hidden" href="#">Model X</a>
@@ -34,12 +39,12 @@ import Xbutton from "./Xbutton.astro";
     <a class="hover:bg-zinc-700/10" href="#">Shop</a>
     <a class="hover:bg-zinc-700/10" href="#">Account</a>
     <a class="hover:bg-zinc-700/10" href="#">More</a>
-    <div class="flex gap-2" role="button" tabindex="0">
+    <a class="flex gap-2 hover:bg-zinc-700/10">
       <img class="h-6 w-5" src="globe.svg" alt="globe icon" />
       <div>
-        <div>United States</div>
-        <a class="text-xs text-zinc-500"> English</a>
+        <p>United States</p>
+        <p class="text-xs text-zinc-500">English</p>
       </div>
-    </div>
+    </a>
   </div>
 </aside>

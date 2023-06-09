@@ -1,9 +1,9 @@
-<section class="relative h-screen w-screen snap-center">
+<section class="relative h-screen w-screen snap-center" id="Section1">
   <div
     class="relative z-20 flex h-screen w-screen flex-col items-center justify-between gap-40"
   >
     <header class="flex flex-col items-center justify-center gap-2 pt-36">
-      <h2 class="first-load-h2 text-4xl">Experience Tasle</h2>
+      <h2 class="first-load-h2 text-4xl text-[2.5rem]">Experience Tasle</h2>
       <p class="first-load-p one-s-delay text-sm font-normal">
         Schedule a Demo Drive Today
       </p>
@@ -28,3 +28,34 @@
       loop></video>
   </div>
 </section>
+<style>
+  .first-load-h2 {
+    animation: first-load-h2 1s ease-in-out;
+  }
+
+  .first-load-p {
+    animation: first-load-p 1.5s ease-in-out;
+  }
+  @keyframes first-load-h2 {
+    0%,
+    50% {
+      opacity: 0;
+      transform: translate(0, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 2;
+    }
+  }
+  @keyframes first-load-p {
+    0%,
+    60% {
+      opacity: 0;
+      transform: translate(0, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+</style>
