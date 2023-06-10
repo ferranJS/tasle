@@ -11,42 +11,42 @@ import Logo from "../components/Logo.astro"
     </a>
   </div>
   <div
-    class="pointer-events-none fixed backdrop-blur-md translate-x-[var(--left)] -z-10 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-500/10 opacity-0 transition-all duration-500 ease-in-out"
+    class="pointer-events-none fixed -z-10 h-[var(--height)] w-[var(--width)] translate-x-[var(--left)] rounded-md bg-zinc-500/10 opacity-0 backdrop-blur-md ease-in-out"
     id="button-hover"
   >
   </div>
   <nav class="hidden xl:inline">
     <ul class="flex">
       <li>
-        <a href="#Model3" class="rounded-md px-3 py-2 z-30">Model 3</a>
+        <a href="#Model3" class="z-30 rounded-md px-3 py-2">Model 3</a>
       </li>
       <li>
-        <a href="#ModelY" class="rounded-md px-3 py-2 z-30">Model X</a>
+        <a href="#ModelX" class="z-30 rounded-md px-3 py-2">Model X</a>
       </li>
       <li>
-        <a href="#ModelX" class="rounded-md px-3 py-2 z-30">Model Y</a>
+        <a href="#ModelY" class="z-30 rounded-md px-3 py-2">Model Y</a>
       </li>
       <li>
-        <a href="#SolarPanels" class="rounded-md px-3 py-2 z-30">Solar Panels</a>
+        <a href="#SolarPanels" class="z-30 rounded-md px-3 py-2">Solar Panels</a>
       </li>
       <li>
-        <a href="#Accessories" class="rounded-md px-3 py-2 z-30">Accessories</a>
+        <a href="#Accessories" class="z-30 rounded-md px-3 py-2">Accessories</a>
       </li>
     </ul>
   </nav>
   <nav class="mr-8 hidden grow basis-0 justify-end xl:flex">
     <ul class="flex">
       <li>
-        <a href="#" class="rounded-md px-3 py-2 z-30">Support</a>
+        <a href="#" class="z-30 rounded-md px-3 py-2">Support</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 z-30">Shop</a>
+        <a href="#" class="z-30 rounded-md px-3 py-2">Shop</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 z-30">Account</a>
+        <a href="#" class="z-30 rounded-md px-3 py-2">Account</a>
       </li>
       <li>
-        <a href="#" class="rounded-md px-3 py-2 z-30" onclick="openSideMenu()">Menu</a>
+        <a href="#" class="z-30 rounded-md px-3 py-2" onclick="openSideMenu()">Menu</a>
       </li>
     </ul>
   </nav>
@@ -62,12 +62,20 @@ import Logo from "../components/Logo.astro"
       buttonHover!.style.setProperty("--left", rect.left + "px")
       buttonHover!.style.setProperty("--width", rect.width + "px")
       buttonHover!.style.setProperty("--height", rect.height + "px")
-      buttonHover!.classList.remove("opacity-0")
+      setTimeout(() => {
+        buttonHover!.classList.add("duration-500")
+        buttonHover!.classList.remove("opacity-0")
+      }, 10)
     })
     element.addEventListener("mouseleave", (e) => {
       buttonHover!.classList.add("opacity-0")
     })
   }) // no hover
+  document.querySelectorAll("header").forEach((element) =>
+    element.addEventListener("mouseleave", (e) => {
+      buttonHover!.classList.remove("duration-500")
+    })
+  )
 
   // in order to control it depending on the section, we can use querySelectorAll
   const section = document.querySelector(".snap-center")
