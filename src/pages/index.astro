@@ -1,41 +1,205 @@
 ---
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
-import Section1 from "../components/Section1.astro";
-import Model3 from "../components/Model3.astro";
-import ModelY from "../components/ModelY.astro";
-import ModelX from "../components/ModelX.astro";
-import SolarPanels from "../components/SolarPanels.astro";
-import Accessories from "../components/Accessories.astro";
-import Menu from "../components/Menu.astro";
+import Header from "../components/Header.astro"
+import Layout from "../layouts/Layout.astro"
+import Menu from "../components/Menu.astro"
+import Section from "../components/Section.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <Layout title="Tasle">
   <Header />
   <main class="h-screen w-screen snap-y snap-mandatory overflow-x-hidden">
-    <Section1 />
-    <Model3 />
-    <ModelY />
-    <ModelX />
-    <SolarPanels />
-    <Accessories />
+    <!-- <Section1 /> -->
+    <Section sectionId="Section1" h2Text="Experience Tasle">
+      <p class="first-load-p one-s-delay text-sm font-normal" slot="header-content">
+        Schedule a Demo Drive Today
+      </p>
+      <a
+        class="block w-5/6 rounded-md border-4 border-white bg-white/5 py-1.5 text-center text-sm transition hover:bg-white hover:text-zinc-900 sm:w-64"
+        href="#"
+        slot="footer-content"
+      >
+        Demo Drive
+      </a>
+      <video
+        src="/astro-tailwind-landing-page/Homepage-Test_Drive-NA-Desktop.webm"
+        class="h-full w-full object-cover"
+        autoplay
+        muted
+        loop
+        slot="background"
+      >
+      </video>
+    </Section>
+    <Section sectionId="Model3" h2Text="Model 3">
+      <h2 class="first-load-h2 text-4xl" slot="header-content"></h2>
+      <div class="text-center" slot="header-content">
+        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
+          Starting at $32,740
+        </p>
+        <p class="first-load-p one-s-delay text-sm font-normal">After Federal Tax Credit</p>
+      </div>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
+        href="#"
+      >
+        Order Now
+      </a>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
+        href="#"
+      >
+        Demo Drive
+      </a>
+      <source
+        slot="background"
+        srcset="/astro-tailwind-landing-page/Homepage-Model-3-Desktop-LHD.avif"
+        media="(min-width: 700px)"
+      />
+      <img
+        slot="background"
+        src="/astro-tailwind-landing-page/Homepage-Model-3-LHD-Mobile.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+      />
+    </Section>
+    <Section sectionId="ModelX" h2Text="Model X">
+      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
+      <div class="text-center" slot="header-content">
+        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">View Inventory</p>
+      </div>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-zinc-800 py-2.5 text-center text-sm text-white transition sm:w-64"
+        href="#"
+      >
+        Order Now
+      </a>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
+        href="#"
+      >
+        Demo Drive
+      </a>
+      <source
+        slot="background"
+        srcset="/astro-tailwind-landing-page/Homepage-Model-X-Desktop-LHD.avif"
+        media="(min-width: 600px)"
+      />
+      <img
+        slot="background"
+        src="/astro-tailwind-landing-page/Homepage-Model-X-Mobile-LHD_001.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+        alt="tasle model x"
+      />
+    </Section>
+    <Section sectionId="ModelY" h2Text="Model Y">
+      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
+      <div class="text-center" slot="header-content">
+        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
+          Starting at $39,990
+        </p>
+        <p class="first-load-p one-s-delay text-sm font-normal">After Federal Tax Credit</p>
+      </div>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
+        href="#"
+      >
+        Order Now
+      </a>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
+        href="#"
+      >
+        Demo Drive
+      </a>
+      <source
+        slot="background"
+        srcset="/astro-tailwind-landing-page/Homepage-Model-Y-Global-Desktop.avif"
+        media="(min-width: 600px)"
+      />
+      <img
+        slot="background"
+        src="/astro-tailwind-landing-page/Homepage-ModelY-LHD-Mobile.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+      />
+    </Section>
+    <Section sectionId="SolarPanels" h2Text="Solar Panels">
+      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
+      <div slot="header-content" class="text-center">
+        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
+          Schedule a Virtual Consultation
+        </p>
+      </div>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-zinc-800 py-2.5 text-center text-sm text-white transition sm:w-64"
+        href="#"
+      >
+        Order Now
+      </a>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
+        href="#"
+      >
+        Learn More
+      </a>
+      <source
+        slot="background"
+        srcset="/astro-tailwind-landing-page/425_HP_SolarPanels_D.avif"
+        media="(min-width: 600px)"
+      />
+      <img
+        slot="background"
+        src="/astro-tailwind-landing-page/Homepage-SolarPanels-Mobile.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+        alt="tasle solar panels"
+      />
+    </Section>
+    <Section sectionId="Accessories" h2Text="Accessories">
+      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
+      <a
+        slot="footer-content"
+        class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
+        href="#"
+      >
+        Shop Now
+      </a>
+      <source
+        slot="background"
+        srcset="/astro-tailwind-landing-page/Desktop_Accessories.avif"
+        media="(min-width: 500px)"
+      />
+      <img
+        slot="background"
+        src="/astro-tailwind-landing-page/Homepage-Accessories-Mobile.avif"
+        class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+        alt="tasle accessories"
+      />
+    </Section>
+    <Footer />
   </main>
   <Menu />
 </Layout>
 
 <script type="text/javascript">
-  const aside = document.querySelector("aside");
-  const backdrop = document.querySelector("#backdrop");
+  const aside = document.querySelector("aside")
+  const backdrop = document.querySelector("#backdrop")
 
   function closeSideMenu() {
-    aside?.classList.remove("-translate-x-80");
-    aside?.classList.add("opacity-0");
-    backdrop?.classList.add("hidden");
+    aside?.classList.remove("-translate-x-80")
+    aside?.classList.add("opacity-0")
+    backdrop?.classList.add("hidden")
   }
 
   function openSideMenu() {
-    aside?.classList.add("-translate-x-80");
-    aside?.classList.remove("opacity-0");
-    backdrop?.classList.remove("hidden");
+    aside?.classList.add("-translate-x-80")
+    aside?.classList.remove("opacity-0")
+    backdrop?.classList.remove("hidden")
   }
 </script>

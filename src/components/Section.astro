@@ -1,0 +1,30 @@
+---
+export interface Props {
+  sectionId: string
+  h2Text: string
+}
+const { sectionId, h2Text } = Astro.props
+---
+
+<section
+  class={"relative h-screen w-screen snap-center " + (sectionId != "Section1" ? "text-zinc-800" : "")}
+  id={sectionId}
+>
+  Text
+  <div class="relative z-20 flex h-screen w-screen flex-col items-center justify-between gap-40">
+    <header class="flex flex-col items-center justify-center gap-2 pt-36">
+      <h2 class="first-load-h2 text-4xl text-[2.5rem]">{h2Text}</h2>
+      <slot name="header-content" />
+    </header>
+    <footer
+      class="relative flex w-screen grow flex-row flex-wrap content-end items-center justify-center gap-5 pb-10 sm:pb-20"
+    >
+      <slot name="footer-content" />
+    </footer>
+  </div>
+  <div class="absolute bottom-0 top-0 z-0 h-full w-full">
+    <picture>
+      <slot name="background" />
+    </picture>
+  </div>
+</section>
