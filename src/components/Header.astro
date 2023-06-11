@@ -50,7 +50,7 @@ import Logo from "../components/Logo.astro"
       </li>
     </ul>
   </nav>
-  <button class="mr-8 rounded-md bg-[#78789136] px-3 py-2 xl:hidden text-[#090901]" onclick=";openSideMenu()">Menu</button>
+  <button class="mr-8 rounded-md bg-[#78789136] px-3 py-2 xl:hidden " onclick=";openSideMenu()">Menu</button>
 </header>
 
 <script>
@@ -85,11 +85,9 @@ import Logo from "../components/Logo.astro"
     const rect = section.getBoundingClientRect()
     const header = document.querySelector("header")
     if (rect.bottom >= 10) {
-      header!.classList.remove("text-zinc-900")
-      header!.classList.add("text-white")
+      header!.classList.remove("text-[#090901]")
     } else {
-      header!.classList.remove("text-white")
-      header!.classList.add("text-zinc-900")
+      header!.classList.add("text-[#090901]")
     }
   }
 
