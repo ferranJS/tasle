@@ -1,4 +1,5 @@
 # [Tesla Landing Clone with Tailwind and Astro](https://ferranjs.github.io/astro-tailwind-landing-page/) ⬅
+
 Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-landing-page)
@@ -11,15 +12,15 @@ Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement f
 
     $~ npm create astro@latest -- --template basics
 
-    $~ npx astro add tailwind 
+    $~ npx astro add tailwind
 
     $~ npm i -D prettier prettier-plugin-astro
 
-    $~ npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting 
+    $~ npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
 
-- Activate Github Actions in settings and add *.github/workflows/*[*deploy.yml* configuration](https://github.com/ferranJS/astro-landing-page/blob/main/.github/workflows/deploy.yml) to the root of the project.
+- Activate Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-landing-page/blob/main/.github/workflows/deploy.yml) to the root of the project.
 
-- Configure *astro.config.mjs* following the [official docs](https://docs.astro.build/en/guides/deploy/github/) and add the base to all src in the project.
+- Configure _astro.config.mjs_ following the [official docs](https://docs.astro.build/en/guides/deploy/github/) and add the base to all src in the project.
 
 ## 🧞 Commands
 
@@ -33,4 +34,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
