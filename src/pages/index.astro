@@ -9,7 +9,6 @@ import Footer from "../components/Footer.astro"
 <Layout title="Tasle">
   <Header />
   <main class="h-screen w-screen snap-y snap-mandatory overflow-x-hidden">
-    <!-- <Section1 /> -->
     <Section sectionId="Section1" h2Text="Experience Tasle">
       <p class="first-load-p one-s-delay text-sm font-normal" slot="header-content">
         Schedule a Demo Drive Today
@@ -32,7 +31,6 @@ import Footer from "../components/Footer.astro"
       </video>
     </Section>
     <Section sectionId="Model3" h2Text="Model 3">
-      <h2 class="first-load-h2 text-4xl" slot="header-content"></h2>
       <div class="text-center" slot="header-content">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
           Starting at $32,740
@@ -62,10 +60,10 @@ import Footer from "../components/Footer.astro"
         slot="background"
         src="/astro-tailwind-landing-page/Homepage-Model-3-LHD-Mobile.avif"
         class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+        alt="tasle model 3"
       />
     </Section>
     <Section sectionId="ModelX" h2Text="Model X">
-      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
       <div class="text-center" slot="header-content">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">View Inventory</p>
       </div>
@@ -96,7 +94,6 @@ import Footer from "../components/Footer.astro"
       />
     </Section>
     <Section sectionId="ModelY" h2Text="Model Y">
-      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
       <div class="text-center" slot="header-content">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
           Starting at $39,990
@@ -126,10 +123,10 @@ import Footer from "../components/Footer.astro"
         slot="background"
         src="/astro-tailwind-landing-page/Homepage-ModelY-LHD-Mobile.avif"
         class="h-screen w-screen object-cover object-[50%_30%] sm:object-center"
+        alt="tasle model y"
       />
     </Section>
     <Section sectionId="SolarPanels" h2Text="Solar Panels">
-      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
       <div slot="header-content" class="text-center">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
           Schedule a Virtual Consultation
@@ -162,7 +159,6 @@ import Footer from "../components/Footer.astro"
       />
     </Section>
     <Section sectionId="Accessories" h2Text="Accessories">
-      <h2 slot="header-content" class="first-load-h2 text-4xl"></h2>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
@@ -184,7 +180,7 @@ import Footer from "../components/Footer.astro"
     </Section>
     <Footer />
   </main>
-  <Menu />
+  <Menu client:visible/>
 </Layout>
 
 <script type="text/javascript">
