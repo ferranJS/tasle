@@ -1,15 +1,14 @@
----
-export function getStaticPaths() {
-  return [{ params: { language: "en" } }, { params: { language: "es" } }]
-}
----
-
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=/astro-tailwind-landing-page/en/" />
+    <meta http-equiv="refresh" />
     <script>
-      document.querySelector("meta").setAttribute("content", "0;url=/astro-tailwind-landing-page/"+navigator.language);
+      document
+        .querySelector("meta")
+        .setAttribute(
+          "content",
+          "0;url=/astro-tailwind-landing-page/" + navigator.language.split("-")[0] + "/"
+        )
     </script>
   </head>
   <body> </body>
