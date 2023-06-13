@@ -1,5 +1,10 @@
 ---
 import Xbutton from "./Xbutton.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import { languages } from "../i18n/languages"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div
@@ -17,33 +22,55 @@ import Xbutton from "./Xbutton.astro"
   <div
     class="flex h-[calc(100vh-80px)] w-full flex-col items-start justify-start gap-2 overflow-auto pb-10 pl-14 pr-8 [&>a]:w-full [&>a]:rounded-md [&>a]:px-3 [&>a]:py-1.5 [&>a]:transition [&>a]:duration-300"
   >
-    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://github.com/ferranJS/astro-tailwind-landing-page">Model 3</a>
-    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://twitter.com/ferran_dev">Model X</a>
-    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://www.linkedin.com/in/ferran-ramirez/">Model Y</a>
-    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://twitter.com/ferran_dev">Solar Panels</a>
-    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://twitter.com/ferran_dev">Powerwall</a>
-    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">Existing Inventory</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Used Inventory</a>
-    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/">Trade-In</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Demo Drive</a>
-    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">Insurance</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Fleet</a>
-    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/">Commercial Energy</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Utilities</a>
-    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">Charging</a>
-    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/">Careers</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Find Us</a>
-    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">Events</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Support</a>
-    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/">Investor Relations</a>
-    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">Shop</a>
-    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">Account</a>
-    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">More</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{"Modetl 3"}</a
+    >
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://twitter.com/ferran_dev">{"Modetl X"}</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://www.linkedin.com/in/ferran-ramirez/"
+      >{"Modetl Y"}</a
+    >
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://twitter.com/ferran_dev">{"Solatr Panels"}</a>
+    <a class="hover:bg-zinc-700/10 xl:hidden" href="https://twitter.com/ferran_dev">{t("Powerwall")}</a>
+    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{"Existintg Inventory"}</a>
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{"Usetd Inventory"}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/">{"Tradte-In"}</a>
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{"Demto Drive"}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("Insurance")}</a>
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{t("Fleet")}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/"
+      >{"Commerciatl Energy"}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{t("Utilities")}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("Charging")}</a>
+    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/">{t("Careers")}</a>
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{"Fintd Us"}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("Events")}</a>
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{t("Support")}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://www.linkedin.com/in/ferran-ramirez/"
+      >{"Investotr Relations"}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("Shop")}</a>
+    <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page"
+      >{t("Account")}</a
+    >
+    <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("More")}</a>
     <a class="flex gap-2 hover:bg-zinc-700/10" href="https://github.com/ferranJS/astro-tailwind-landing-page">
-      <img class="h-6 w-5" src="globe.svg" alt="globe icon" loading="lazy"/>
+      <img class="h-6 w-5" src="globe.svg" alt="globe icon" loading="lazy" />
       <div>
-        <p>United States</p>
-        <p class="text-xs text-zinc-500">English</p>
+        <p>{t("United States")}</p>
+        <p class="text-xs text-zinc-500">{languages[lang]}</p>
       </div>
     </a>
   </div>

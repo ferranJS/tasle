@@ -4,25 +4,35 @@ import Layout from "../../layouts/Layout.astro"
 import Menu from "../../components/Menu.astro"
 import Section from "../../components/Section.astro"
 import Footer from "../../components/Footer.astro"
+import { getLangFromUrl, useTranslations } from "../../i18n/utils"
+import { languages } from "../../i18n/languages"
 
 export function getStaticPaths() {
-  return [{ params: { language: "en" } }, { params: { language: "es" } }]
+  const paths = []
+  for (const language of Object.keys(languages)) {
+    paths.push({ params: { language } })
+  }
+  return paths
 }
+
+const lang = getLangFromUrl(Astro.url)
+console.log("lang: ", lang);
+const t = useTranslations(lang)
 ---
 
 <Layout title="Tasle">
   <Header />
   <main class="h-screen w-screen snap-y snap-mandatory overflow-x-hidden">
-    <Section sectionId="Section1" h2Text="Experience Tasle">
+    <Section sectionId="Section1" h2Text={t("Experience Tasle")}>
       <p class="first-load-p one-s-delay text-sm font-normal" slot="header-content">
-        Schedule a Demo Drive Today
+        {t("Schedule a Demo Drive Today")}
       </p>
       <a
         class="block w-5/6 rounded-md border-4 border-white bg-white/5 py-1.5 text-center text-sm transition hover:bg-white hover:text-zinc-900 sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
         slot="footer-content"
       >
-        Demo Drive
+        {t("Demo Drive")}
       </a>
       <video
         src="/astro-tailwind-landing-page/Homepage-Test_Drive-NA-Desktop.webm"
@@ -34,26 +44,26 @@ export function getStaticPaths() {
       >
       </video>
     </Section>
-    <Section sectionId="Model3" h2Text="Model 3">
+    <Section sectionId="Model3" h2Text={t("Model 3")}>
       <div class="text-center" slot="header-content">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
-          Starting at $32,740
+          {t("Starting at")} $32,740
         </p>
-        <p class="first-load-p one-s-delay text-sm font-normal">After Federal Tax Credit</p>
+        <p class="first-load-p one-s-delay text-sm font-normal">{t("After Federal Tax Credit")}</p>
       </div>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
       >
-        Order Now
+        {t("Order Now")}
       </a>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
         href="https://twitter.com/ferran_dev"
       >
-        Demo Drive
+        {t("Demo Drive")}
       </a>
       <source
         slot="background"
@@ -68,23 +78,25 @@ export function getStaticPaths() {
         loading="lazy"
       />
     </Section>
-    <Section sectionId="ModelX" h2Text="Model X">
+    <Section sectionId="ModelX" h2Text={t("Model X")}>
       <div class="text-center" slot="header-content">
-        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">View Inventory</p>
+        <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
+          {t("View Inventory")}
+        </p>
       </div>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-zinc-800 py-2.5 text-center text-sm text-white transition sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
       >
-        Order Now
+        {t("Order Now")}
       </a>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
         href="https://twitter.com/ferran_dev"
       >
-        Demo Drive
+        {t("Demo Drive")}
       </a>
       <source
         slot="background"
@@ -99,26 +111,26 @@ export function getStaticPaths() {
         loading="lazy"
       />
     </Section>
-    <Section sectionId="ModelY" h2Text="Model Y">
+    <Section sectionId="ModelY" h2Text={t("Model Y")}>
       <div class="text-center" slot="header-content">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
-          Starting at $39,990
+          {t("Starting at")} $39,990
         </p>
-        <p class="first-load-p one-s-delay text-sm font-normal">After Federal Tax Credit</p>
+        <p class="first-load-p one-s-delay text-sm font-normal">{t("After Federal Tax Credit")}</p>
       </div>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
       >
-        Order Now
+        {t("Order Now")}
       </a>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
         href="https://twitter.com/ferran_dev"
       >
-        Demo Drive
+        {t("Demo Drive")}
       </a>
       <source
         slot="background"
@@ -133,10 +145,10 @@ export function getStaticPaths() {
         loading="lazy"
       />
     </Section>
-    <Section sectionId="SolarPanels" h2Text="Solar Panels">
+    <Section sectionId="SolarPanels" h2Text={t("Solar Panels")}>
       <div slot="header-content" class="text-center">
         <p class="first-load-p one-s-delay text-sm font-normal underline underline-offset-4">
-          Schedule a Virtual Consultation
+          {t("Schedule a Virtual Consultation")}
         </p>
       </div>
       <a
@@ -144,14 +156,14 @@ export function getStaticPaths() {
         class="block w-5/6 rounded-md bg-zinc-800 py-2.5 text-center text-sm text-white transition sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
       >
-        Order Now
+        {t("Order Now")}
       </a>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-white py-2.5 text-center text-sm text-zinc-800 transition sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
       >
-        Learn More
+        {t("Learn More")}
       </a>
       <source
         slot="background"
@@ -166,13 +178,13 @@ export function getStaticPaths() {
         loading="lazy"
       />
     </Section>
-    <Section sectionId="Accessories" h2Text="Accessories">
+    <Section sectionId="Accessories" h2Text={t("Accessories")}>
       <a
         slot="footer-content"
         class="block w-5/6 rounded-md bg-zinc-700 py-2.5 text-center text-sm text-white transition sm:w-64"
         href="https://github.com/ferranJS/astro-tailwind-landing-page"
       >
-        Shop Now
+        {t("Shop Now")}
       </a>
       <source
         slot="background"

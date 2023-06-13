@@ -1,5 +1,9 @@
 ---
 import Logo from "../components/Logo.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <header
@@ -18,39 +22,45 @@ import Logo from "../components/Logo.astro"
   <nav class="hidden xl:inline">
     <ul class="flex">
       <li>
-        <a href="#Model3" class="z-30 rounded-md px-3 py-2">Model 3</a>
+        <a href="#Model3" class="z-30 rounded-md px-3 py-2">{t("Model 3")}</a>
       </li>
       <li>
-        <a href="#ModelX" class="z-30 rounded-md px-3 py-2">Model X</a>
+        <a href="#ModelX" class="z-30 rounded-md px-3 py-2">{t("Model X")}</a>
       </li>
       <li>
-        <a href="#ModelY" class="z-30 rounded-md px-3 py-2">Model Y</a>
+        <a href="#ModelY" class="z-30 rounded-md px-3 py-2">{t("Model Y")}</a>
       </li>
       <li>
-        <a href="#SolarPanels" class="z-30 rounded-md px-3 py-2">Solar Panels</a>
+        <a href="#SolarPanels" class="z-30 rounded-md px-3 py-2">{t("Solar Panels")}</a>
       </li>
       <li>
-        <a href="#Accessories" class="z-30 rounded-md px-3 py-2">Accessories</a>
+        <a href="#Accessories" class="z-30 rounded-md px-3 py-2">{t("Accessories")}</a>
       </li>
     </ul>
   </nav>
   <nav class="mr-8 hidden grow basis-0 justify-end xl:flex">
     <ul class="flex">
       <li>
-        <a href="https://github.com/ferranJS/astro-tailwind-landing-page" class="z-30 rounded-md px-3 py-2">Support</a>
+        <a href="https://github.com/ferranJS/astro-tailwind-landing-page" class="z-30 rounded-md px-3 py-2"
+          >{t("Support")}</a
+        >
       </li>
       <li>
-        <a href="https://github.com/ferranJS/astro-tailwind-landing-page" class="z-30 rounded-md px-3 py-2">Shop</a>
+        <a href="https://github.com/ferranJS/astro-tailwind-landing-page" class="z-30 rounded-md px-3 py-2"
+          >{t("Shop")}</a
+        >
       </li>
       <li>
-        <a href="https://github.com/ferranJS/astro-tailwind-landing-page" class="z-30 rounded-md px-3 py-2">Account</a>
+        <a href="https://github.com/ferranJS/astro-tailwind-landing-page" class="z-30 rounded-md px-3 py-2"
+          >{t("Account")}</a
+        >
       </li>
       <li>
-        <a class="z-30 rounded-md px-3 py-2" onclick="openSideMenu()">Menu</a>
+        <a class="z-30 rounded-md px-3 py-2" onclick="openSideMenu()">{t("Menu")}</a>
       </li>
     </ul>
   </nav>
-  <button class="mr-8 rounded-md bg-[#78789136] px-3 py-2 xl:hidden " onclick=";openSideMenu()">Menu</button>
+  <button class="mr-8 rounded-md bg-[#78789136] px-3 py-2 xl:hidden" onclick=";openSideMenu()">Menu</button>
 </header>
 
 <script>
