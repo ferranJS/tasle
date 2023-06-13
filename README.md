@@ -12,13 +12,13 @@ This page **automatically detects** your language and changes the content accord
 
 ## Setup roadmap
 
-    $~ npm create astro@latest -- --template basics
+>npm create astro@latest -- --template basics
 
-    $~ npx astro add tailwind
+>npx astro add tailwind
 
-    $~ npm i -D prettier prettier-plugin-astro
+>npm i -D prettier prettier-plugin-astro
 
-    $~ npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
+>npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
 
 - Activate Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-landing-page/blob/main/.github/workflows/deploy.yml) to the root of the project.
 
