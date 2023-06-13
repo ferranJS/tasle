@@ -8,7 +8,9 @@ export function getStaticPaths() {
 <html>
   <head>
     <meta http-equiv="refresh" content="0;url=/astro-tailwind-landing-page/en/" />
-    <script></script>
+    <script>
+      document.querySelector("meta").setAttribute("content", "0;url=/astro-tailwind-landing-page/"+navigator.language);
+    </script>
   </head>
   <body> </body>
 </html>
