@@ -16,7 +16,6 @@ export function getStaticPaths() {
 }
 
 const lang = getLangFromUrl(Astro.url)
-console.log("lang: ", lang);
 const t = useTranslations(lang)
 ---
 
