@@ -2,14 +2,9 @@
   <head>
     <meta http-equiv="refresh" content="0;url=/astro-tailwind-landing-page/en" />
     <script>
-      let lang = ""
-      if (navigator.language) {
-        if (Array.isArray(navigator.language)) lang = navigator.language[0].split("-")[0]
-        else lang = navigator.language.split("-")[0]
-      } else {
-        lang = navigator.languages[0].split("-")[0]
-      }
-      document.querySelector("meta").setAttribute("content", "0;url=/astro-tailwind-landing-page/" + lang)
+      document
+        .querySelector("meta")
+        .setAttribute("content", "0;url=/astro-tailwind-landing-page/" + navigator.languages[0].split("-")[0])
     </script>
   </head>
   <body> </body>
