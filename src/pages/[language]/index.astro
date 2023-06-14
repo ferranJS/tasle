@@ -5,11 +5,11 @@ import Menu from "../../components/Menu.astro"
 import Section from "../../components/Section.astro"
 import Footer from "../../components/Footer.astro"
 import { getLangFromUrl, useTranslations } from "../../i18n/utils"
-import { languages } from "../../i18n/languages"
+import { ui } from "../../i18n/languages"
 
 export function getStaticPaths() {
   const paths = []
-  for (const language of Object.keys(languages)) {
+  for (const language of Object.keys(ui)) {
     paths.push({ params: { language } })
   }
   return paths
