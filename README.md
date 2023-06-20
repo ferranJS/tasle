@@ -1,4 +1,4 @@
-# [Tesla Landing Clone with Tailwind and Astro](https://ferranjs.github.io/astro-tailwind-landing-page/) ⬅
+# [Tesla Landing Clone with Tailwind and Astro](https://ferranjs.github.io/astro-tailwind-landing-0/) ⬅
 
 Made in a week with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development. 
 
