@@ -4,11 +4,11 @@ Made in a week with [Tailwind](https://tailwindcss.com/) as an improvement for f
 
 This page **automatically detects** your language and changes the content accordingly and **instantly**.  
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-landing-page)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-landing-page)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-landing-page?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-tailwind-landing-0)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-tailwind-landing-0)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-tailwind-landing-0?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-<img src="https://github.com/ferranJS/astro-landing-page/blob/main/public/landing-screenshot.png" height="434px" alt="landing page screenshot">
+<img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.png" height="434px" alt="landing page screenshot">
 
 ## Setup roadmap
 
@@ -20,7 +20,7 @@ This page **automatically detects** your language and changes the content accord
 
 >npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
 
-- Activate Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-landing-page/blob/main/.github/workflows/deploy.yml) to the root of the project.
+- Activate Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/.github/workflows/deploy.yml) to the root of the project.
 
 - Configure _astro.config.mjs_ following the [official docs](https://docs.astro.build/en/guides/deploy/github/) and add the base to all src in the project.
 
