@@ -10,5 +10,6 @@
   ],
   "semi": false,
   "tabWidth": 2,
-  "printWidth": 111
+  "printWidth": 111,
+  "arrowParens": "avoid"
 }
