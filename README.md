@@ -2,9 +2,9 @@
 
 Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development.
 
-This page **automatically detects** your language and changes the content accordingly and **instantly**.
+- 700KB bundle size
 
-Astro native Dynamic routing was used in order to achieve this automatically translated HTML fetching.
+- This page **automatically detects** your language and changes the content accordingly and **instantly**. Astro native Dynamic routing was used in order to achieve this automatically translated HTML fetching.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-tailwind-landing-0)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-tailwind-landing-0)
