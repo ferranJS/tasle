@@ -1,8 +1,8 @@
 # [Tesla Landing Clone with Tailwind and Astro](https://ferranjs.github.io/astro-tailwind-landing-0/) ⬅
 
-Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development. 
+Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development.
 
-This page **automatically detects** your language and changes the content accordingly and **instantly**.  
+This page **automatically detects** your language and changes the content accordingly and **instantly**.
 
 Astro native Dynamic routing was used in order to achieve this automatically translated HTML fetching.
 
@@ -14,13 +14,13 @@ Astro native Dynamic routing was used in order to achieve this automatically tra
 
 ## Setup roadmap
 
->npm create astro@latest -- --template basics
+> npm create astro@latest -- --template basics
 
->npx astro add tailwind
+> npx astro add tailwind
 
->npm i -D prettier prettier-plugin-astro
+> npm i -D prettier prettier-plugin-astro
 
->npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
+> npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
 
 - Activate Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/.github/workflows/deploy.yml) to the root of the project.
 
