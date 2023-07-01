@@ -6,6 +6,7 @@ import Section from "../../components/Section.astro"
 import Footer from "../../components/Footer.astro"
 import { getLangFromUrl, useTranslations } from "../../i18n/utils"
 import { ui } from "../../i18n/languages"
+import Socials from "../../components/Socials.astro"
 
 export function getStaticPaths() {
   const paths = []
@@ -196,6 +197,7 @@ const t = useTranslations(lang)
     <Footer />
   </main>
   <Menu />
+  <Socials/>
 </Layout>
 
 <script type="text/javascript">
