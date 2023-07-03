@@ -12,7 +12,7 @@ Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement f
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-tailwind-landing-0)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-tailwind-landing-0?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-<img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.png" height="434px" alt="landing page screenshot">
+<img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" height="434px" alt="landing page screenshot">
 
 ## Setup roadmap
 
