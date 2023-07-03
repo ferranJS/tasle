@@ -3,6 +3,8 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+
+const baseURL = import.meta.env.BASE_URL
 ---
 
 <footer
@@ -11,7 +13,7 @@ const t = useTranslations(lang)
   <a href="https://github.com/ferranJS">{t("Tasle © 2023")}</a>
   <a href="https://www.linkedin.com/in/ferran-ramirez/">{t("Privacy & Legal")}</a>
   <a href="https://twitter.com/ferran_dev" class="hidden sm:block">{t("Vehicle Recalls")}</a>
-  <a href="https://github.com/ferranJS/astro-tailwind-landing-0" class="hidden sm:block">{t("Contact")}</a>
+  <a href={"https://github.com/ferranJS" + baseURL} class="hidden sm:block">{t("Contact")}</a>
   <a href="https://www.linkedin.com/in/ferran-ramirez/">{t("News")}</a>
   <a href="https://github.com/ferranJS" class="hidden sm:block">{t("Get Updates")}</a>
   <a href="https://twitter.com/ferran_dev" class="hidden sm:block">{t("Locations")}</a>

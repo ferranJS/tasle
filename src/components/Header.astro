@@ -4,6 +4,8 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+
+const baseURL = import.meta.env.BASE_URL
 ---
 
 <header
@@ -41,7 +43,7 @@ const t = useTranslations(lang)
   <nav class="mr-8 hidden grow basis-0 justify-end xl:flex">
     <ul class="flex">
       <li>
-        <a href="https://github.com/ferranJS/astro-tailwind-landing-0" class="z-30 rounded-md px-3 py-2"
+        <a href={"https://github.com/ferranJS"+baseURL} class="z-30 rounded-md px-3 py-2"
           >{t("Support")}</a
         >
       </li>
@@ -49,7 +51,7 @@ const t = useTranslations(lang)
         <a href="https://github.com/ferranJS" class="z-30 rounded-md px-3 py-2">{t("Shop")}</a>
       </li>
       <li>
-        <a href="https://github.com/ferranJS/astro-tailwind-landing-0" class="z-30 rounded-md px-3 py-2"
+        <a href={"https://github.com/ferranJS"+baseURL} class="z-30 rounded-md px-3 py-2"
           >{t("Account")}</a
         >
       </li>
@@ -60,7 +62,7 @@ const t = useTranslations(lang)
   </nav>
   <button
     class="mr-8 rounded-md bg-[#78789136] px-3 py-2 duration-200 hover:bg-zinc-400/75 xl:hidden"
-    onclick=";openSideMenu()">Menu</button
+    onclick="; openSideMenu()">Menu</button
   >
 </header>
 
