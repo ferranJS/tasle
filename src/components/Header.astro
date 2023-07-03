@@ -46,9 +46,7 @@ const t = useTranslations(lang)
         >
       </li>
       <li>
-        <a href="https://github.com/ferranJS" class="z-30 rounded-md px-3 py-2"
-          >{t("Shop")}</a
-        >
+        <a href="https://github.com/ferranJS" class="z-30 rounded-md px-3 py-2">{t("Shop")}</a>
       </li>
       <li>
         <a href="https://github.com/ferranJS/astro-tailwind-landing-0" class="z-30 rounded-md px-3 py-2"
@@ -60,14 +58,17 @@ const t = useTranslations(lang)
       </li>
     </ul>
   </nav>
-  <button class="mr-8 rounded-md bg-[#78789136] hover:bg-zinc-400/75 duration-200 px-3 py-2 xl:hidden" onclick=";openSideMenu()">Menu</button>
+  <button
+    class="mr-8 rounded-md bg-[#78789136] px-3 py-2 duration-200 hover:bg-zinc-400/75 xl:hidden"
+    onclick=";openSideMenu()">Menu</button
+  >
 </header>
 
 <script>
   const buttonHover = document.querySelector("#button-hover") as HTMLDivElement
   // movement between buttons
-  document.querySelectorAll("header a.rounded-md").forEach((element) => {
-    element.addEventListener("mouseenter", (e) => {
+  document.querySelectorAll("header a.rounded-md").forEach(element => {
+    element.addEventListener("mouseenter", e => {
       const rect = (e.target as HTMLElement).getBoundingClientRect()
       buttonHover!.style.setProperty("--left", rect.left + "px")
       buttonHover!.style.setProperty("--width", rect.width + "px")
@@ -77,12 +78,12 @@ const t = useTranslations(lang)
         buttonHover!.classList.remove("opacity-0")
       }, 10)
     })
-    element.addEventListener("mouseleave", (e) => {
+    element.addEventListener("mouseleave", e => {
       buttonHover!.classList.add("opacity-0")
     })
   }) // no hover
-  document.querySelectorAll("header").forEach((element) =>
-    element.addEventListener("mouseleave", (e) => {
+  document.querySelectorAll("header").forEach(element =>
+    element.addEventListener("mouseleave", e => {
       buttonHover!.classList.remove("duration-500")
     })
   )
