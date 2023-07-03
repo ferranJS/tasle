@@ -1,52 +1,60 @@
+---
+import config from "../../astro.config.mjs"
+---
+
 <aside
   id="socials"
-  class="fixed bottom-4 left-4 z-[9999] flex flex-col items-start duration-500 [&>a>div>p]:line-clamp-1 [&>a>div>p]:text-clip [&>a>div>p]:leading-4 [&>a>div]:max-w-0 [&>a>div]:duration-1000 [&>a>img]:h-11 [&>a>img]:w-11 [&>a>img]:p-2 [&>a]:flex [&>a]:items-center [&>a]:overflow-hidden"
+  class="fixed bottom-4 left-4 z-[9999] flex flex-col items-start duration-500 [&>a>div>p]:line-clamp-1 [&>a>div>p]:text-clip [&>a>div>p]:leading-4 [&>a>div]:max-w-0 [&>a>div]:duration-1000 [&>a>img]:h-11 [&>a>img]:w-11 [&>a>img]:p-2 [&>a]:flex [&>a]:items-center [&>a]:overflow-hidden text-white font-medium"
 >
   <button onclick="closeSocials()">
-    <img src="x.svg" class="h-11 w-11 p-2.5 opacity-60 hover:opacity-90 duration-300" alt="close button" />
+    <img
+      src={config.base + "/x.svg"}
+      class="h-11 w-11 p-2.5 opacity-60 hover:opacity-90 duration-300"
+      alt="close button"
+    />
   </button>
   <a
     class="group bg-orange-600/90"
     target="_blank"
     href="https://github.com/ferranJS/astro-tailwind-landing-0"
   >
-    <img src="github.svg" alt="github logo" />
+    <img src={config.base + "/github.svg"} alt="github logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">This repo</p>
     </div>
   </a>
   <a class="group bg-lime-500/90" target="_blank" href="https://github.com/ferranJS">
-    <img src="github.svg" alt="github logo" />
+    <img src={config.base + "/github.svg"} alt="github logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">My profile</p>
     </div>
   </a>
   <a class="group bg-purple-600/90" target="_blank" href="https://www.linkedin.com/in/ferran-ramirez/">
-    <img src="linkedin.svg" alt="linkedin logo" />
+    <img src={config.base + "/linkedin.svg"} alt="linkedin logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">Linkedin</p>
     </div>
   </a>
   <a class="group bg-rose-500/90" target="_blank" href="mailto:contact@ferran.tech">
-    <img src="email.svg" alt="email logo" />
+    <img src={config.base + "/email.svg"} alt="email logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">contact@ferran.tech</p>
     </div>
   </a>
   <a class="group bg-blue-600/90" target="_blank" href="https://twitter.com/ferran_dev">
-    <img src="twitter.svg" alt="twitter logo" />
+    <img src={config.base + "/twitter.svg"} alt="twitter logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">Twitter</p>
     </div>
   </a>
   <a class="group bg-teal-500/90" target="_blank" href="https://leetcode.com/ferranDev/">
-    <img src="leetcode.svg" alt="leetcode logo" />
+    <img src={config.base + "/leetcode.svg"} alt="leetcode logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">Leetcode</p>
     </div>
   </a>
   <a class="group bg-rose-500/90" target="_blank" href="https://www.reddit.com/user/ferranJS">
-    <img src="reddit.svg" alt="reddit logo" />
+    <img src={config.base + "/reddit.svg"} alt="reddit logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">Reddit</p>
     </div>
@@ -75,10 +83,10 @@
 </style>
 
 <script type="text/javascript">
-  const socials = document.querySelector("#socials")
-  function closeSocials() {
-    socials.classList.add("-translate-x-5")
-    socials.classList.add("opacity-0")
-    socials.classList.add("pointer-events-none")
-  }
+const socials = document.querySelector("#socials")
+function closeSocials() {
+  socials.classList.add("-translate-x-5")
+  socials.classList.add("opacity-0")
+  socials.classList.add("pointer-events-none")
+}
 </script>
