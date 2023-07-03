@@ -4,16 +4,20 @@ const baseURL = import.meta.env.BASE_URL
 
 <aside
   id="socials"
-  class="fixed bottom-4 left-4 z-[9999] flex flex-col items-start font-medium text-white duration-500 [&>a>div>p]:line-clamp-1 [&>a>div>p]:text-clip [&>a>div>p]:leading-4 [&>a>div]:max-w-0 [&>a>div]:duration-1000 [&>a>img]:h-11 [&>a>img]:w-11 [&>a>img]:p-2 [&>a]:flex [&>a]:items-center [&>a]:overflow-hidden"
+  class="fixed bottom-4 left-4 z-[9999] flex flex-col items-start duration-500 [&>a>div>p]:line-clamp-1 [&>a>div>p]:text-clip [&>a>div>p]:leading-4 [&>a>div]:max-w-0 [&>a>div]:duration-1000 [&>a>img]:h-11 [&>a>img]:w-11 [&>a>img]:p-2 [&>a]:flex [&>a]:items-center [&>a]:overflow-hidden text-white font-medium"
 >
   <button onclick="closeSocials()">
     <img
       src={baseURL + "x.svg"}
-      class="h-11 w-11 p-2.5 opacity-60 duration-300 hover:opacity-90"
+      class="h-11 w-11 p-2.5 opacity-60 hover:opacity-90 duration-300"
       alt="close button"
     />
   </button>
-  <a class="group bg-orange-600/90" target="_blank" href={"https://github.com/ferranJS" + baseURL}>
+  <a
+    class="group bg-orange-600/90"
+    target="_blank"
+    href={"https://github.com/ferranJS"+baseURL}
+  >
     <img src={baseURL + "github.svg"} alt="github logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">This repo</p>
@@ -60,7 +64,7 @@ const baseURL = import.meta.env.BASE_URL
 <style>
   #socials {
     animation: socials 2s ease-in-out backwards;
-    animation-delay: 1s;
+    animation-delay: 3s;
   }
   @keyframes socials {
     0% {
@@ -79,10 +83,10 @@ const baseURL = import.meta.env.BASE_URL
 </style>
 
 <script type="text/javascript">
-  const socials = document.querySelector("#socials")
-  function closeSocials() {
-    socials.classList.add("-translate-x-5")
-    socials.classList.add("opacity-0")
-    socials.classList.add("pointer-events-none")
-  }
+const socials = document.querySelector("#socials")
+function closeSocials() {
+  socials.classList.add("-translate-x-5")
+  socials.classList.add("opacity-0")
+  socials.classList.add("pointer-events-none")
+}
 </script>
