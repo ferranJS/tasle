@@ -6,13 +6,15 @@ Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement f
 
 - This page **automatically detects** your language and changes the content accordingly and **instantly**. Astro native Dynamic routing was used in order to achieve this automatically translated HTML fetching.
 
-[PageSpeed Insights](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-astro-tailwind-landing-0-en/szyyq7f3mb?form_factor=mobile)
+[PageSpeed Insights](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-astro-tailwind-landing-0-en/7wf6un5crn?form_factor=mobile)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-tailwind-landing-0)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-tailwind-landing-0)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-tailwind-landing-0?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-<img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" height="434px" alt="landing page screenshot">
+<p float="left">
+  <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot-2.gif" height="450px" alt="desktop view landing page screenshot">
+  <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" height="410px" alt="mobile view landing page screenshot">
+</p>
 
 ## Setup roadmap
 
