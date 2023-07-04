@@ -2,11 +2,13 @@
 
 Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development.
 
-- 700KB bundle size
-
-- This page **automatically detects** your language and changes the content accordingly and **instantly**. Astro native Dynamic routing was used in order to achieve this automatically translated HTML fetching.
-
-[PageSpeed Insights](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-astro-tailwind-landing-0-en/7wf6un5crn?form_factor=mobile)
+- Automatic and instant browser language detection.
+- Only **700kB bundle size** including images
+- **Responsive** design
+- **SEO** friendly
+- Optimized images using **WebP**, **Avif** formats 
+  
+Perfect [Google PageSpeed Insights Score](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-astro-tailwind-landing-0-en/7wf6un5crn?form_factor=mobile)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-tailwind-landing-0)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-tailwind-landing-0)
@@ -30,9 +32,6 @@ Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement f
 
 - Configure _astro.config.mjs_ following the [official docs](https://docs.astro.build/en/guides/deploy/github/) and adding the base to all src in the project.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
