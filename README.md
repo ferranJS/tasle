@@ -28,7 +28,7 @@ Perfect [Google PageSpeed Insights Score](https://pagespeed.web.dev/analysis/htt
 
 > npm i -D prettier-plugin-tailwindcss // for prettier automatic tailwind class sorting
 
-- Activate Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/.github/workflows/deploy.yml) to the root of the project.
+- Set up Github Actions in settings and add _.github/workflows/_[_deploy.yml_ configuration](https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/.github/workflows/deploy.yml) to the root of the project.
 
 - Configure _astro.config.mjs_ following the [official docs](https://docs.astro.build/en/guides/deploy/github/) and adding the base to all src in the project.
 
