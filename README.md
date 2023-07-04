@@ -12,9 +12,10 @@ Perfect [Google PageSpeed Insights Score](https://pagespeed.web.dev/analysis/htt
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/astro-tailwind-landing-0)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/astro-tailwind-landing-0)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ferranJS/astro-tailwind-landing-0?devcontainer_path=.devcontainer/basics/devcontainer.json)
+
 <p float="left">
-  <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot-2.gif" height="450px" alt="desktop view landing page screenshot">
-  <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" height="410px" alt="mobile view landing page screenshot">
+  <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot-2.gif" height="440px" alt="desktop view landing page screenshot">
+  <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" height="400px" alt="mobile view landing page screenshot">
 </p>
 
 Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development.
