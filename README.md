@@ -15,10 +15,10 @@ Perfect [Google PageSpeed Insights Score](https://pagespeed.web.dev/analysis/htt
 
 <p float="left">
   <a href="https://ferranjs.github.io/astro-tailwind-landing-0">
-    <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot-2.gif" width="177px" alt="desktop view landing page screenshot">
+    <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot-2.gif" width="175px" alt="desktop view landing page screenshot">
   </a>
   <a href="https://ferranjs.github.io/astro-tailwind-landing-0">
-    <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" width="657px" alt="mobile view landing page screenshot">
+    <img src="https://github.com/ferranJS/astro-tailwind-landing-0/blob/main/public/landing-screenshot.gif" width="651px" alt="mobile view landing page screenshot">
   </a>
 </p>
 
