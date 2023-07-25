@@ -23,6 +23,7 @@ const t = useTranslations(lang)
 ---
 
 <Layout title="Tasle">
+  <script slot="script" src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
   <Header />
   <main class="h-screen w-screen snap-y snap-mandatory overflow-x-hidden">
     <Section sectionId="Section1" h2Text={t("Experience Tasle")}>
@@ -33,6 +34,7 @@ const t = useTranslations(lang)
         class="block w-5/6 rounded-md border-4 border-white bg-white/5 py-1.5 text-center text-sm transition hover:bg-white hover:text-zinc-900 sm:w-64"
         href={"https://github.com/ferranJS" + baseURL}
         slot="footer-content"
+        id="button"
       >
         {t("Demo Drive")}
       </a>
@@ -229,18 +231,32 @@ const t = useTranslations(lang)
 </Layout>
 
 <script type="text/javascript">
-const menu = document.querySelector("#menu")
-const backdrop = document.querySelector("#backdrop")
+  const menu = document.querySelector("#menu")
+  const backdrop = document.querySelector("#backdrop")
 
-function closeSideMenu() {
-  menu.classList.remove("-translate-x-80")
-  menu.classList.add("opacity-0")
-  backdrop.classList.add("hidden")
-}
+  function closeSideMenu() {
+    menu.classList.remove("-translate-x-80")
+    menu.classList.add("opacity-0")
+    backdrop.classList.add("hidden")
+  }
 
-function openSideMenu() {
-  menu.classList.add("-translate-x-80")
-  menu.classList.remove("opacity-0")
-  backdrop.classList.remove("hidden")
-}
+  function openSideMenu() {
+    menu.classList.add("-translate-x-80")
+    menu.classList.remove("opacity-0")
+    backdrop.classList.remove("hidden")
+  }
+
+  // driver.js
+  const driver = window.driver.js.driver
+
+  const driverObj = driver({
+    showProgress: true,
+    steps: [
+      { element: "#title", popover: { title: "The main title", description: "nice transition uwu" } },
+      { element: "#socials", popover: { title: "My socials", description: "so cooool" } },
+      { element: "#button", popover: { title: "A button", description: "hmmm just a button lol" } },
+    ],
+  })
+
+  setTimeout(driverObj.drive, 1000)
 </script>
