@@ -230,7 +230,7 @@ const t = useTranslations(lang)
   <Socials />
 </Layout>
 
-<script type="text/javascript">
+<script is:inline>
   const menu = document.querySelector("#menu")
   const backdrop = document.querySelector("#backdrop")
 
@@ -245,16 +245,5 @@ const t = useTranslations(lang)
     menu.classList.remove("opacity-0")
     backdrop.classList.remove("hidden")
   }
-
-  // driver.js
-  const driver = window.driver.js.driver
-
-  const driverObj = driver({
-    showProgress: true,
-    steps: [
-      { element: "#title", popover: { title: "The main title", description: "nice transition uwu" } },
-      { element: "#button", popover: { title: "A button", description: "hmmm just a button lol" } },
-      { element: "#socials", popover: { title: "My socials", description: "so cooool" } },
-    ],
-  })
 </script>
+<script is:inline src="/Drive.js"></script>

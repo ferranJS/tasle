@@ -53,7 +53,11 @@ const baseURL = import.meta.env.BASE_URL
     <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("Shop")}</a>
     <a class="hover:bg-zinc-700/10" href="https://github.com/ferranJS">{t("Account")}</a>
     <a class="hover:bg-zinc-700/10" href="https://twitter.com/ferran_dev">{t("More")}</a>
-    <a class="flex gap-2 hover:bg-zinc-700/10" href={"https://github.com/ferranJS" + baseURL}>
+    <a
+      id="language-selector"
+      class="flex gap-2 hover:bg-zinc-700/10"
+      href={"https://github.com/ferranJS" + baseURL}
+    >
       <img class="h-6 w-5" src={baseURL + "globe.svg"} alt="globe icon" loading="lazy" />
       <div>
         <p>{t("United States")}</p>

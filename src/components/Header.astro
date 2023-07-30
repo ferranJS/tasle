@@ -17,59 +17,59 @@ const baseURL = import.meta.env.BASE_URL
     </a>
   </div>
   <div
-    class="pointer-events-none fixed -z-10 h-[var(--height)] w-[var(--width)] translate-x-[var(--left)] rounded-md bg-zinc-500/10 opacity-0 backdrop-blur-md ease-in-out"
+    class="pointer-events-none fixed -z-10 h-[var(--height)] w-[var(--width)] translate-x-[var(--left)] rounded-md bg-zinc-600/10 opacity-0 backdrop-blur-md ease-in-out"
     id="button-hover"
   >
   </div>
+  <div class="pointer-events-none absolute right-0 mr-8 h-8" id="navs-drive-step"></div>
   <nav class="hidden xl:inline">
-    <ul class="flex">
+    <ul class="flex items-center">
       <li>
-        <a href="#Model3" class="z-30 rounded-md px-3 py-2">{t("Model 3")}</a>
+        <a href="#Model3" class="rounded-md px-3 py-2">{t("Model 3")}</a>
       </li>
       <li>
-        <a href="#ModelX" class="z-30 rounded-md px-3 py-2">{t("Model X")}</a>
+        <a href="#ModelX" class="rounded-md px-3 py-2">{t("Model X")}</a>
       </li>
       <li>
-        <a href="#ModelY" class="z-30 rounded-md px-3 py-2">{t("Model Y")}</a>
+        <a href="#ModelY" class="rounded-md px-3 py-2">{t("Model Y")}</a>
       </li>
       <li>
-        <a href="#SolarPanels" class="z-30 rounded-md px-3 py-2">{t("Solar Panels")}</a>
+        <a href="#SolarPanels" class="rounded-md px-3 py-2">{t("Solar Panels")}</a>
       </li>
       <li>
-        <a href="#Accessories" class="z-30 rounded-md px-3 py-2">{t("Accessories")}</a>
+        <a href="#Accessories" class="rounded-md px-3 py-2">{t("Accessories")}</a>
       </li>
     </ul>
   </nav>
   <nav class="mr-8 hidden grow basis-0 justify-end xl:flex">
-    <ul class="flex">
+    <ul class="flex items-center">
       <li>
-        <a href={"https://github.com/ferranJS"+baseURL} class="z-30 rounded-md px-3 py-2"
-          >{t("Support")}</a
-        >
+        <a href={"https://github.com/ferranJS" + baseURL} class="rounded-md px-3 py-2">{t("Support")}</a>
       </li>
       <li>
-        <a href="https://github.com/ferranJS" class="z-30 rounded-md px-3 py-2">{t("Shop")}</a>
+        <a href="https://github.com/ferranJS" class="rounded-md px-3 py-2">{t("Shop")}</a>
       </li>
       <li>
-        <a href={"https://github.com/ferranJS"+baseURL} class="z-30 rounded-md px-3 py-2"
-          >{t("Account")}</a
-        >
+        <a href={"https://github.com/ferranJS" + baseURL} class="rounded-md px-3 py-2">{t("Account")}</a>
       </li>
       <li>
-        <button class="z-30 rounded-md px-3 py-2" onclick="openSideMenu()">{t("Menu")}</button>
+        <button class="rounded-md px-3 py-2" id="menu-button" onclick="openSideMenu()">{t("Menu")}</button>
       </li>
     </ul>
   </nav>
   <button
     class="mr-8 rounded-md bg-[#78789136] px-3 py-2 duration-200 hover:bg-zinc-400/75 xl:hidden"
-    onclick="; openSideMenu()">Menu</button
+    onclick=";openSideMenu()"
+    id="menu-button-mobile"
   >
+    Menu
+  </button>
 </header>
 
 <script>
   const buttonHover = document.querySelector("#button-hover") as HTMLDivElement
   // movement between buttons
-  document.querySelectorAll("header a.rounded-md").forEach(element => {
+  const headerButtonInteraction = (element: Element) => {
     element.addEventListener("mouseenter", e => {
       const rect = (e.target as HTMLElement).getBoundingClientRect()
       buttonHover!.style.setProperty("--left", rect.left + "px")
@@ -83,15 +83,24 @@ const baseURL = import.meta.env.BASE_URL
     element.addEventListener("mouseleave", e => {
       buttonHover!.classList.add("opacity-0")
     })
-  }) // no hover
-  document.querySelectorAll("header").forEach(element =>
-    element.addEventListener("mouseleave", e => {
-      buttonHover!.classList.remove("duration-500")
-    })
-  )
+  }
+  // add hover effect to all "a" elements
+  document.querySelectorAll("header a.rounded-md").forEach(headerButtonInteraction)
+  // add hover effect to "button" element
+  headerButtonInteraction(document.getElementById("menu-button")!)
+  // this makes the hover appear directly on the button and not transition from the previous one
+  document.querySelector("header")!.addEventListener("mouseleave", e => {
+    buttonHover!.classList.remove("duration-500")
+  })
 
   // in order to control it depending on the section, querySelectorAll.forEach could be used
   const section = document.querySelector(".snap-center")
+
+  // change header color from black to white and viceversa on scroll of the first section
+  document.querySelector("main")?.addEventListener("scroll", () => {
+    clearTimeout((window as any).scrollTimer)
+    ;(window as any).scrollTimer = setTimeout(handleScroll, 50)
+  })
 
   function handleScroll() {
     if (!section) return false
@@ -103,9 +112,4 @@ const baseURL = import.meta.env.BASE_URL
       header!.classList.add("text-[#090901]")
     }
   }
-
-  document.querySelector("main")?.addEventListener("scroll", () => {
-    clearTimeout((window as any).scrollTimer)
-    ;(window as any).scrollTimer = setTimeout(handleScroll, 50)
-  })
 </script>

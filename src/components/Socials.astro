@@ -17,7 +17,7 @@ const baseURL = import.meta.env.BASE_URL
   <button
     class="group flex items-center overflow-hidden bg-teal-500/90"
     id="tour-button"
-    onclick="driverObj.drive()"
+    onclick=";driverObj.drive()"
   >
     <img
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/tour_guide2.svg"
@@ -93,7 +93,7 @@ const baseURL = import.meta.env.BASE_URL
 <style>
   #socials {
     animation: socials 2s ease-in-out backwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
   }
   @keyframes socials {
     0% {
@@ -111,7 +111,7 @@ const baseURL = import.meta.env.BASE_URL
   }
 
   #tour-button {
-    animation: tilt-shaking 5s ease-in-out infinite;
+    animation: tilt-shaking 4s ease-in-out infinite;
     translate: 0 1px;
   }
   #tour-button:hover {
@@ -139,7 +139,7 @@ const baseURL = import.meta.env.BASE_URL
   }
 </style>
 
-<script type="text/javascript">
+<script is:inline>
   const socials = document.querySelector("#socials")
   function closeSocials() {
     socials.classList.add("-translate-x-10")
