@@ -1,6 +1,5 @@
 const driver = window.driver.js.driver
 const config = {
-  showButtons: ["next", "previous"],
   steps: [
     {
       element: "xxxx",
