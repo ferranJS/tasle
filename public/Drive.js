@@ -1,12 +1,13 @@
 const driver = window.driver.js.driver
 const config = {
+  showProgress: true,
   steps: [
     {
       element: "xxxx",
       popover: {
         title: "About this site",
         description:
-          "This is a visual copy of the Tesla website. It was made with a <b>responsive design</b> in mind, so different <i><b>.avif</b></i> and <i><b>.webp</b></i> images are loaded depending on the screen size and format browser support.",
+          "This is a visual copy of the Tesla website. It was made with a <b>responsive design</b> in mind, so <i><b>.avif</b></i> and <i><b>.webp</b></i> images are loaded depending on the screen size and browser format support. Despite the number of loaded images, the total size of the package is <b>only 700KB</b>.",
         onNextClick: () => {
           if (window.innerWidth > 1280) window.location.href = "#Model3"
           driverObj.moveNext()
@@ -29,7 +30,7 @@ if (window.innerWidth > 1280) {
     popover: {
       title: "Hover effect on the header buttons",
       description:
-        "This effect is achieved by emulating the hover with an element that takes the position and width of the nav buttons with <i><b>mouseenter</b></i> and <i><b>mouseleave</b></i>.",
+        "This effect is achieved by emulating the hover with an element that can move from button to button.",
     },
   })
   config.steps.push({
@@ -37,7 +38,7 @@ if (window.innerWidth > 1280) {
     popover: {
       title: "Hover effect on the header buttons",
       description:
-        'An <i>eventListener</i> is added to all buttons through a loop after getting them with <i>querySelectorAll</i> so the "hover element" can move from one column of buttons to the other too.',
+        'This is implemented by adding <i>event listeners</i> to all buttons from both nav elements through a loop so that the "hover element" can take the width and position of the buttons on <i>mouseenter</i> and <i>mouseleave</i>.',
       onNextClick: openSideMenuAndMoveNext,
     },
   })
@@ -46,7 +47,7 @@ if (window.innerWidth > 1280) {
     element: "xxxx",
     popover: {
       title: "Hover effect on the header buttons",
-      description: "In order to view this effect, please open this site on a <b>desktop browser</b>.",
+      description: "To view this effect, please open this site on a <b>desktop browser</b>.",
       onNextClick: openSideMenuAndMoveNext,
     },
   })
@@ -63,7 +64,7 @@ config.steps.push({
   popover: {
     title: "Language selector",
     description:
-      "When the webpage loads, <i>the language is set</i> to the browser's language, and you can also change it here. The webpage was translated in some languages and compiled in <b>build time</b> with Astro.",
+      "When the webpage loads, <i>the language is set</i> to the browser's language, and you can also change it here. This webpage was translated in some languages and compiled in <b>build time</b> with Astro.",
     onNextClick: () => {
       closeSideMenu()
       driverObj.moveNext()
@@ -75,7 +76,7 @@ config.steps.push({
   popover: {
     title: "Check out my socials",
     description:
-      "I love to keep me updated and comment on the state of the art through Twitter and LinkedIn, so feel free to follow me there!",
+      "I love to keep myself updated and comment on the state of the art through Twitter and LinkedIn, so feel free to follow me there!",
   },
 })
 
