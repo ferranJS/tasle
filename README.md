@@ -1,7 +1,7 @@
 # [Tesla Landing Clone with Tailwind and Astro](https://ferranjs.github.io/astro-tailwind-landing-0/) ⬅
 
 - Automatic and instant browser language detection.
-- Only **700kB bundle size** including images
+- Only **1.5 - 1.8MB bundle size** including the video
 - **Responsive** design
 - **SEO** friendly
 - Optimized images using **Avif** and **WebP** formats

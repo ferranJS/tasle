@@ -7,7 +7,7 @@ const config = {
       popover: {
         title: "About this site",
         description:
-          "This is a visual copy of the Tesla website. It was made with a <b>responsive design</b> in mind, so <i><b>.avif</b></i> and <i><b>.webp</b></i> images are loaded depending on the screen size and browser format support. Despite the number of loaded images, the total size of the package is <b>only 700KB</b>.",
+          "This is a visual copy of the Tesla website. It was made with a <b>responsive design</b> in mind, so <i><b>.avif</b></i> and <i><b>.webp</b></i> images are loaded depending on the screen size and browser format support. Despite the number of loaded images, the total size of the package is <b>only 1.5 - 1.8 MB</b> including the video.",
         onNextClick: () => {
           if (window.innerWidth > 1280) window.location.href = "#Model3"
           driverObj.moveNext()
