@@ -11,6 +11,7 @@ export const languages = {
 }
 
 export const defaultLang = "en"
+export const defaultRegion = "usa"
 
 export const ui = {
   en: {
@@ -57,8 +58,14 @@ export const ui = {
     Events: "Events",
     "Investor Relations": "Investor Relations",
     More: "More",
-
+    Region: "Region",
+    Language: "Language",
     "United States": "United States",
+    Europe: "Europe",
+    "South & Central America": "South & Central America",
+    China: "China",
+    Japan: "Japan",
+    Australia: "Australia",
   },
   es: {
     "Model 3": "Modelo 3",
@@ -103,8 +110,14 @@ export const ui = {
     Events: "Eventos",
     "Investor Relations": "Relaciones con los inversores",
     More: "Más información en",
-
-    "United States": "España",
+    Region: "Región",
+    Language: "Idioma",
+    "United States": "Estados Unidos",
+    Europe: "Europa",
+    "South & Central America": "América Central y del Sur",
+    China: "China",
+    Japan: "Japón",
+    Australia: "Australia",
   },
   ko: {
     "Model 3": "Model 3",
@@ -146,7 +159,14 @@ export const ui = {
     Events: "이벤트",
     "Investor Relations": "투자자 관계",
     More: "더 보기",
-    "United States": "대한민국",
+    Region: "지역",
+    Language: "언어",
+    "United States": "미국",
+    Europe: "유럽",
+    "South & Central America": "중남미",
+    China: "중국",
+    Japan: "일본",
+    Australia: "호주",
   },
   ru: {
     "Model 3": "Модель 3",
@@ -188,7 +208,14 @@ export const ui = {
     Events: "События",
     "Investor Relations": "Отношения с инвесторами",
     More: "Больше",
+    Region: "Регион",
+    Language: "Язык",
     "United States": "Соединенные Штаты",
+    Europe: "Европа",
+    "South & Central America": "Южная и Центральная Америка",
+    China: "Китай",
+    Japan: "Япония",
+    Australia: "Австралия",
   },
   de: {
     "Model 3": "Modell 3",
@@ -230,7 +257,14 @@ export const ui = {
     Events: "Veranstaltungen",
     "Investor Relations": "Investor Relations",
     More: "Mehr",
+    Region: "Region",
+    Language: "Sprache",
     "United States": "Vereinigte Staaten",
+    Europe: "Europa",
+    "South & Central America": "Süd- und Mittelamerika",
+    China: "China",
+    Japan: "Japan",
+    Australia: "Australien",
   },
   it: {
     "Model 3": "Modello 3",
@@ -272,7 +306,14 @@ export const ui = {
     Events: "Eventi e manifestazioni",
     "Investor Relations": "Relazioni con gli investitori",
     More: "Altro",
+    Region: "Regione",
+    Language: "Lingua",
     "United States": "Stati Uniti",
+    Europe: "Europa",
+    "South & Central America": "Sud e Centro America",
+    China: "Cina",
+    Japan: "Giappone",
+    Australia: "Australia",
   },
   fr: {
     "Model 3": "Modèle 3",
@@ -314,7 +355,14 @@ export const ui = {
     Events: "Evénements",
     "Investor Relations": "Relations avec les investisseurs",
     More: "Plus d'informations",
+    Region: "Région",
+    Language: "Langue",
     "United States": "États-Unis",
+    Europe: "Europe",
+    "South & Central America": "Amérique du Sud et centrale",
+    China: "Chine",
+    Japan: "Japon",
+    Australia: "Australie",
   },
   ja: {
     "Model 3": "モデル3",
@@ -356,7 +404,14 @@ export const ui = {
     Events: "イベント情報",
     "Investor Relations": "投資家情報",
     More: "その他の情報",
+    Region: "地域",
+    Language: "言語",
     "United States": "米国",
+    Europe: "ヨーロッパ",
+    "South & Central America": "中南米",
+    China: "中国",
+    Japan: "日本",
+    Australia: "オーストラリア",
   },
   zh: {
     "Model 3": "模型3",
@@ -398,7 +453,14 @@ export const ui = {
     Events: "活动",
     "Investor Relations": "投资者关系",
     More: "更多",
+    Region: "地区",
+    Language: "语言",
     "United States": "美国",
+    Europe: "欧洲",
+    "South & Central America": "中南美洲",
+    China: "中国",
+    Japan: "日本",
+    Australia: "澳大利亚",
   },
   ab: {},
   aa: {},
@@ -528,3 +590,12 @@ export const ui = {
   yo: {},
   zu: {},
 } as const
+
+export const regions = {
+  usa: "United States",
+  eu: "Europe",
+  sa: "South & Central America",
+  chn: "China",
+  jap: "Japan",
+  aus: "Australia",
+}

@@ -1,0 +1,57 @@
+---
+import Xbutton from "./Xbutton.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import Backbutton from "./Backbutton.astro"
+import { languages, regions } from "../i18n/languages"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const baseURL = import.meta.env.BASE_URL
+---
+
+<aside
+  id="language-menu"
+  class="fixed -right-80 bottom-0 top-0 z-50 h-screen w-80 overflow-hidden bg-white text-sm font-medium text-zinc-700 transition duration-300"
+>
+  <div class="flex w-80 justify-between px-8 py-5">
+    <Backbutton Class="w-5" action="closeSideMenu" />
+    <Xbutton Class="w-6" action="closeLanguageMenu" />
+  </div>
+  <div class="h-[calc(100vh-80px)] overflow-auto">
+    <p class="pb-5 pl-14 pr-8 text-lg font-semibold">Region</p>
+    <div
+      class="flex w-full flex-col items-start justify-start gap-2 overflow-auto pb-10 pl-14 pr-8 [&>a]:w-full [&>a]:rounded-md [&>a]:px-3 [&>a]:py-1.5 [&>a]:transition [&>a]:duration-300"
+    >
+      {
+        Object.keys(regions).map(regionKey => (
+          <a class="hover:bg-zinc-700/10 xl:hidden" href={regionKey}>
+            {regions[regionKey]}
+          </a>
+        ))
+      }
+    </div>
+    <p class="pb-5 pl-14 pr-8 text-lg font-semibold">Language</p>
+    <div
+      id="language-list"
+      class="flex w-full flex-col items-start justify-start gap-2 overflow-auto pb-10 pl-14 pr-8 [&>a]:w-full [&>a]:rounded-md [&>a]:px-3 [&>a]:py-1.5 [&>a]:transition [&>a]:duration-300"
+    >
+      {
+        Object.keys(languages).map(languageKey => (
+          <a id={languageKey} class="hover:bg-zinc-700/10 xl:hidden">
+            {languages[languageKey]}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</aside>
+
+<script is:inline>
+  // set href for language anchors
+  const urlArray = window.location.href.split("/")
+  const region = urlArray[5]
+  document.querySelectorAll("#language-list a").forEach(el => {
+    el.setAttribute("href", urlArray.slice(0, -2).join("/") + "/" + el.id + "/" + region)
+  })
+</script>
