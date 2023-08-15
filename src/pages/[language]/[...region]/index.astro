@@ -24,7 +24,8 @@ const t = useTranslations(lang)
 ---
 
 <Layout title="Tasle">
-  <script slot="script" src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+  <script defer slot="script" src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"
+  ></script>
   <Header />
   <main class="h-screen w-screen snap-y snap-mandatory overflow-x-hidden">
     <Section sectionId="Section1" h2Text={t("Experience Tasle")}>
@@ -261,4 +262,4 @@ const t = useTranslations(lang)
     languageMenu.classList.remove("opacity-0")
   }
 </script>
-<script is:inline src={baseURL + "Drive.js"}></script>
+<script defer is:inline src={baseURL + "Drive.js"}></script>
