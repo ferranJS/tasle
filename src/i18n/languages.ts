@@ -36,7 +36,7 @@ export const ui = {
     "Shop Now": "Shop Now",
     "Schedule a Virtual Consultation": "Schedule a Virtual Consultation",
 
-    "Tasle © 2023": "Tasle © 2023",
+    "Tasle ©": "Tasle ©",
     "Privacy & Legal": "Privacy & Legal",
     "Vehicle Recalls": "Vehicle Recalls",
     Contact: "Contact",
