@@ -9,6 +9,7 @@ const baseURL = import.meta.env.BASE_URL
 >
   <button onclick="closeSocials()">
     <img
+      fetchpriority="low"
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/x.svg"
       class="m-1 h-9 w-9 rounded-full bg-gray-800/30 p-2 opacity-80 duration-300 hover:opacity-100"
       alt="close button"
@@ -20,6 +21,7 @@ const baseURL = import.meta.env.BASE_URL
     onclick=";driverObj.drive()"
   >
     <img
+      fetchpriority="low"
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/tour_guide2.svg"
       alt="tour guide icon"
       class="h-11 w-11 p-2"
@@ -29,19 +31,28 @@ const baseURL = import.meta.env.BASE_URL
     </div>
   </button>
   <a class="group bg-orange-600/90" target="_blank" href={"https://github.com/ferranJS" + baseURL}>
-    <img src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/github.svg" alt="github logo" />
+    <img
+      fetchpriority="low"
+      src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/github.svg"
+      alt="github logo"
+    />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">This repo</p>
     </div>
   </a>
   <a class="group bg-lime-500/90" target="_blank" href="https://github.com/ferranJS">
-    <img src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/github.svg" alt="github logo" />
+    <img
+      fetchpriority="low"
+      src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/github.svg"
+      alt="github logo"
+    />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">My profile</p>
     </div>
   </a>
   <a class="group bg-purple-600/90" target="_blank" href="https://www.linkedin.com/in/ferran-ramirez/">
     <img
+      fetchpriority="low"
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/linkedin.svg"
       alt="linkedin logo"
     />
@@ -50,7 +61,7 @@ const baseURL = import.meta.env.BASE_URL
     </div>
   </a>
   <!-- <a class="group bg-green-400/90" target="_blank" href="https://ferran.tech">
-    <img
+    <img fetchpriority="low"
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/ferranJS.svg"
       alt="ferranJS logo"
     />
@@ -59,13 +70,18 @@ const baseURL = import.meta.env.BASE_URL
     </div>
   </a> -->
   <a class="group bg-rose-500/90" target="_blank" href="mailto:contact@ferran.tech">
-    <img src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/email.svg" alt="email logo" />
+    <img
+      fetchpriority="low"
+      src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/email.svg"
+      alt="email logo"
+    />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">contact@ferran.tech</p>
     </div>
   </a>
   <a class="group bg-blue-600/90" target="_blank" href="https://twitter.com/ferran_dev">
     <img
+      fetchpriority="low"
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/twitter.svg"
       alt="twitter logo"
     />
@@ -74,7 +90,7 @@ const baseURL = import.meta.env.BASE_URL
     </div>
   </a>
   <!-- <a class="group bg-sky-600/90" target="_blank" href="https://leetcode.com/ferranDev/">
-    <img
+    <img fetchpriority="low"
       src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/leetcode.svg"
       alt="leetcode logo"
     />
@@ -83,7 +99,7 @@ const baseURL = import.meta.env.BASE_URL
     </div>
   </a> -->
   <!-- <a class="group bg-rose-500/90" target="_blank" href="https://www.reddit.com/user/ferranJS">
-    <img src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/reddit.svg" alt="reddit logo" />
+    <img fetchpriority="low" src="https://raw.githubusercontent.com/ferranJS/ferranJS/master/media/reddit.svg" alt="reddit logo" />
     <div class="group-hover:max-w-[300px]">
       <p class="pr-2">Reddit</p>
     </div>

@@ -7,8 +7,8 @@
 - Optimized images using **Avif** and **WebP** formats
 - Pre-commit Hooks with Husky & Lint-staged for a Prettier write
 
-Perfect [Google PageSpeed Insights Score (with language redirect)](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-tasle/40aculfyoo?form_factor=mobile)
-Perfect [Google PageSpeed Insights Score (with set language)](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-tasle-en-usa/nmazm3ch5i?form_factor=mobile)
+Perfect [Google PageSpeed Insights Score (with language redirect)](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-tasle/6z9iiut75n?form_factor=desktop)
+Perfect [Google PageSpeed Insights Score (with set language)](https://pagespeed.web.dev/analysis/https-ferranjs-github-io-tasle-en-usa/eixd9ycfx1?form_factor=desktop)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ferranJS/tasle)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ferranJS/tasle)
