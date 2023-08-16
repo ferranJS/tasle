@@ -2,14 +2,11 @@
 const baseURL = import.meta.env.BASE_URL
 ---
 
-<html>
-  <head>
-    <meta http-equiv="refresh" content={"0;url=" + baseURL + "en"} />
-    <script define:vars={{ baseURL }}>
-      document
-        .querySelector("meta")
-        .setAttribute("content", "0;url=" + baseURL + navigator.languages[0].split("-")[0] + "/usa")
-    </script>
-  </head>
-  <body> </body>
-</html>
+<head>
+  <meta http-equiv="refresh" content={"0;url=" + baseURL + "en"} />
+  <script define:vars={{ baseURL }}>
+    document
+      .querySelector("meta")
+      .setAttribute("content", "0;url=" + baseURL + navigator.languages[0].split("-")[0] + "/usa")
+  </script>
+</head>

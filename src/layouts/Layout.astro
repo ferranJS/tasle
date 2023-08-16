@@ -4,21 +4,19 @@ export interface Props {
 }
 const { title } = Astro.props
 
-import { getLangFromUrl } from "../i18n/utils"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 
 const baseURL = import.meta.env.BASE_URL
+const t = useTranslations(lang)
 ---
 
 <!DOCTYPE html>
 <html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="This Tesla landing page clone was made in a few days by Ferran Ramírez for fun, using Tailwind as an improvement for faster CSS coding and Astro for good performance (packs with Vite) and comfortable web development"
-    />
+    <meta name="description" content={t("metaDescription")} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={baseURL + "favicon.ico"} />
     <meta name="generator" content={Astro.generator} />
