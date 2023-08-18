@@ -106,7 +106,7 @@ const baseURL = import.meta.env.BASE_URL
   </a> -->
 </aside>
 
-<style>
+<style is:global>
   #socials {
     animation: socials 2s ease-in-out backwards;
     animation-delay: 2s;
@@ -152,6 +152,25 @@ const baseURL = import.meta.env.BASE_URL
     96% {
       transform: rotate(-5deg);
     }
+  }
+
+  .driver-popover-footer button {
+    @apply cursor-pointer rounded px-4 py-2 text-sm font-bold duration-200;
+    background-color: rgba(107, 230, 216, 0.9);
+    text-shadow: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(105, 227, 213, 0.9);
+  }
+  .driver-popover-description {
+    padding-bottom: 15px;
+    border-bottom: 1px solid gainsboro;
+  }
+  .driver-popover-close-btn {
+    width: 32px;
+    font-size: 24px;
+  }
+  .driver-popover-footer {
+    gap: 20px;
   }
 </style>
 
