@@ -3,11 +3,13 @@ const baseURL = import.meta.env.BASE_URL
 ---
 
 <head>
-  <meta http-equiv="refresh" content={"0;url=" + baseURL + "en"} />
+  <meta http-equiv="refresh" content={"0;url=" + baseURL + "en/usa"} />
   <script define:vars={{ baseURL }}>
     const lang = navigator.languages[0].split("-")[0]
     // if the slug is the device language it goes into a loop
-    if (window.location.href.split("/")[3] !== lang)
+    console.log("window.location.href.split('/')[4]: ", window.location.href.split("/")[4])
+    console.log("lang: ", lang)
+    if (window.location.href.split("/")[4] !== lang)
       document.querySelector("meta").setAttribute("content", "0;url=" + baseURL + lang)
   </script>
 </head>

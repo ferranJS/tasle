@@ -12,7 +12,7 @@ const { sectionId, h2Text } = Astro.props
 >
   <div class="relative z-20 flex h-screen w-screen flex-col items-center justify-between gap-40">
     <header class="flex flex-col items-center justify-center gap-2 pt-36">
-      <h2 class="first-load-h2 text-4xl text-[2.5rem]">{h2Text}</h2>
+      <h2 class="first-load-h2 px-10 text-4xl text-[2.5rem]">{h2Text}</h2>
       <slot name="header-content" />
     </header>
     <footer
